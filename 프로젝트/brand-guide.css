@@ -1,0 +1,436 @@
+@font-face {
+  font-family: 'PuradakGentleGothicR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KoPub Dotum";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff2") format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff") format("woff"),
+    url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.otf") format("opentype"),
+    url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.ttf") format("truetype");
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: KoPub Dotum; */
+  /* line-height: 1.6; */
+  color: black;
+  max-width: 420px;
+  /* 전체 가로 크기 고정 */
+  margin: auto;
+  /* 페이지를 화면 중앙으로 정렬 */
+  background-color: white;
+}
+
+#top {
+  display: flex;
+  justify-content: space-between;
+  /* 수평 이미지 정렬 */
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1001;
+  /* 메뉴보다 위에 오도록 설정 */
+  background-color: white;
+}
+
+#hidden-menu {
+  position: relative;
+}
+
+#menu-toggle {
+  display: none;
+  /* 숨겨진 체크박스 */
+}
+
+#menu-toggle+.top-menu img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+#menu-toggle:checked~#top-menu {
+  right: 0;
+  /* 메뉴가 보이도록 설정 */
+}
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  /* 양쪽 정렬 */
+  align-items: center;
+  /* 세로 중앙 정렬 */
+  margin: 10px 0 10px;
+  height: 50px;
+}
+
+#top-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  /* 세로 정렬 */
+}
+
+#top-bt {
+  display: flex;
+  gap: 10px;
+  margin-left: 25px;
+  /* 좌측 25px 띄움 */
+}
+
+#top-bt a {
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+}
+
+#close-bt label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  /* 좌측 25px 띄움 */
+
+}
+
+#menu-bt1,
+#menu-bt2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px;
+  height: 26px;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(179, 178, 178, 0.685);
+  border-top: 0.5px solid rgba(179, 178, 178, 0.685);
+  margin-bottom: 10px;
+  padding: 0;
+  /* 내부 여백 제거 */
+  height: 44px;
+  /* #solid의 높이와 동일하게 설정 */
+}
+
+#info a {
+  color: black;
+  text-decoration: none;
+  line-height: 44px;
+}
+
+#login,
+#join {
+  flex-direction: column;
+  /* 세로 정렬 */
+  width: 50%;
+  display: flex;
+  text-align: center;
+}
+
+#solid {
+  height: 44px;
+  width: 0.5px;
+  background-color: rgba(179, 178, 178, 0.685);
+}
+
+#sub-menu {
+  display: flex;
+  flex-direction: column;
+  /* 세로 정렬 */
+  gap: 10px;
+  /* 메뉴 간 간격 */
+}
+
+#sub-menu>div {
+  display: flex;
+  align-items: center;
+  /* 세로 방향 중앙 정렬 */
+  border-bottom: 0.5px solid rgba(179, 178, 178, 0.685);
+  justify-content: space-between;
+  height: 50px;
+}
+
+#sub-menu>div img {
+  position: absolute;
+  right: 30px;
+}
+
+#sub-menu>div a {
+  padding-left: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+#middle{
+  width: 100%;
+}
+#content {
+  display: flex;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url('(소스)/topmenu_bar.png');
+  width: 100%;
+  height: 108px;
+}
+
+#content2 {
+  width: 100%;
+  height: 78px;
+  background-color: rgb(198, 157, 97);
+  padding-left: 35px;
+  line-height: 78px;
+  color: white;
+  font-size: 23px;
+  font-family: 'PuradakGentleGothicR';
+}
+
+#content2 p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.267);
+}
+
+#content3 {
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#content3 img{
+  width: 100%;
+}
+
+#content3 p {
+  font-size: 25px;
+  font-family: PuradakGentleGothicR;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+#content3_subimg {
+  margin-top: 20px;
+  /* 위 요소와의 간격 추가 */
+}
+
+#content3_subimg img {
+  width: 150px;
+}
+
+#content3_subimg p {
+  font-family: KoPub Dotum;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+  text-align: center;
+  /* 텍스트를 중앙 정렬 */
+  padding-top: 3px;
+}
+
+#content4 {
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+  padding-top: 60px;
+}
+
+#content4 h3,
+#content4 p {
+  padding-left: 40px;
+}
+
+#content4 h3 {
+  font-family: PuradakGentleGothicR;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+#content4 p {
+  font-family: KoPub Dotum;
+  font-size: 14px;
+  line-height: 1.3;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+#content4 img {
+  width: 100%;
+}
+
+#ask {
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(77, 74, 74);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ask>#solid {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(179, 178, 178, 0.685);
+}
+
+#ask>#ceo,
+#ask>#set {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+#ask>#ceo>strong,
+#ask>#set>strong {
+  font-size: 25px;
+  font-weight: bold;
+  color:  rgb(198, 157, 97);
+}
+
+#ask>#ceo>strong>span,
+#ask>#set>strong>span {
+  color: white;
+}
+
+#ask>#ceo>a,
+#ask>#set>a {
+  padding: 10px 40px;
+  width: 130px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: rgb(198, 157, 97);
+  color: black;
+}
+
+#footer {
+  margin: 0 auto;
+  padding: 35px 0;
+  width: 100%;
+  height: 500px;
+  font-size: 13px;
+  text-align: center;
+  background-color: black;
+  color: rgb(209, 209, 209);
+}
+
+#footer a {
+  color: white;
+}
+
+#footer>#sns {
+  margin: auto;
+  padding: 20px;
+}
+
+#footer>#awards {
+  padding: 20px;
+  border-top: 0.5px solid rgba(179, 178, 178, 0.685);
+}
+
+#footer>#corporation {
+  padding-top: 10px;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 13px;
+}
+
+#side-bt {
+  position: fixed;
+  /* 화면 고정 */
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  /* 세로 정렬 */
+  align-items: center;
+  gap: 10px;
+
+}
+
+#side-bt>a>img {
+  max-width: 50px;
+  height: auto;
+  right: 60px;
+  background: none;
+  /* 배경색 제거 */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.123);
+  /* 부드러운 그림자 추가 */
+  border-radius: 50px;
+  /* 선택적으로 둥근 모서리 추가 */
+}
+
+#side-bt>#startup,
+#side-bt>#order {
+  display: block;
+}
+
+#order {
+  width: 100px;
+  height: 100px;
+  animation-name: aa;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#startup {
+  width: 100px;
+  height: 100px;
+  animation-name: aa;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes aa {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 5px);
+  }
+}
