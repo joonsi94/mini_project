@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/service3_support.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="top">
+                <ul id="top1">
+                    <li class="tlist">
+                        <a href="/service1.html" class="topm">서비스</a>
+                        <ul id="sm-1">
+                            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service1.html">서비스 소개</a></li>
+                            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service2.html">서비스 비용</a></li>
+                            <li><a href="/service3.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="tlist">
+                        <a href="/reservation.html" class="topm">바로예약</a>
+                    </li>
+                    <li class="tlist">
+                        <a href="/index.html" class="toplogo"><img src="img/zim guard_logo.png" alt="logo"
+                                style="width: 250px; height: 70px;"></a>
+                    </li>
+                    <li class="tlist">
+                        <a href="/check.html" class="topm">예약확인</a>
+                    </li>
+                    <li class="tlist">
+                        <a href="/customer_support.html" class="topm">고객지원</a>
+                        <ul id="sm-2">
+                            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/customer_support.html">FAQ</a></li>
+                            <li><a href="/user_review.html">이용후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section id="content">
+            <h1>짐가드 매장안내</h1>
+            <h5>Outline Map</h5>
+            <div id="wrap">
+                <div id="map">
+                    <img src="/img/map.svg" alt="" style="width: 650px; height: 392px;">
+                </div>
+                <div id="text" style="font-size: 1.2rem; padding: 2em 0;">
+                    대구광역시 동구 동대구로550 <br>
+                    전화:053-000-0000
+                </div>
+            </div>
+        </section>
+        <div id="sdk">
+            <a href="">
+                <img src="/img/kakao.png" alt="">
+            </a>
+        </div>
+        <footer>
+            <div id="f1">
+                <p>
+                    <a href="/service1.html">서비스 |</a>
+                    <a href="/reservation.html">바로예약 |</a>
+                    <a href="/check.html">예약확인 |</a>
+                    <a href="/customer_support.html">고객지원 |</a>
+                    <a href="">개인정보취급방침</a>
+                    <a href="#" class="gotop"><img src="/img/top.png" alt=""></a>
+                </p>
+            </div>
+            <div id="f2">
+                <div id="f2-1">
+                    <img src="/img/zim guard_logo.png" alt="">
+                    <p>상호: 짐가드 | 사업자등록번호: 707-07-7777 | 대표: 홍길동 | 주소: 대구광역시 동구 동대구로550</br>
+                        전화: 053-777-7777 | 개인정보책임관리자: 홍길동 | 이메일: zimguard@naver.com</br>
+                        2025Zimguard.BlahBlahBlahBlahBlahBlahBlahBlahBlahBlah[Blah]</p>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const goTopBtn = document.querySelector(".gotop"); // "Top" 버튼 선택
+
+    goTopBtn.addEventListener("click", function (event) {
+        event.preventDefault(); // 기본 이벤트(즉시 이동) 막기
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+</script>
+</html>

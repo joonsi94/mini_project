@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>예약확인</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 공통 CSS(헤더/푸터 스타일 등) + 예약완료 페이지 전용 CSS -->
+  <link rel="stylesheet" href="reservation_info.css">
+</head>
+<body>
+<div id="container">
+  <!-- 헤더 영역 (이전과 동일) -->
+  <header>
+    <div id="top">
+      <ul id="top1">
+        <li class="tlist">
+          <a href="/service1.html" class="topm">서비스</a>
+          <ul id="sm-1" class="sm">
+            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service1.html">서비스 소개</a></li>
+            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service2.html">서비스 비용</a></li>
+            <li><a href="/service3.html">오시는 길</a></li>
+          </ul>
+        </li>
+        <li class="tlist">
+          <a href="/reservation.html" class="topm">바로예약</a>
+        </li>
+        <li class="tlist">
+          <a href="#" class="toplogo">
+            <img src="/img/Jim guard_logo.png" alt="logo" style="width:250px; height:70px;">
+          </a>
+        </li>
+        <li class="tlist">
+          <a href="/check.html" class="topm">예약확인</a>
+        </li>
+        <li class="tlist">
+          <a href="/customer_support.html" class="topm">고객지원</a>
+          <ul id="sm-2" class="sm">
+            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/customer_support.html">FAQ</a></li>
+            <li><a href="/user_review.html">이용후기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 본문 영역 -->
+  <section>
+    <!-- 상단 타이틀 섹션 -->
+    <div class="title-section">
+      <h1>예약확인</h1>
+      <p>Reservation</p>
+    </div>
+
+    <!-- 예약확인 컨테이너 (테이블 형식) -->
+    <div class="confirm-container">
+      <table class="confirm-table">
+        <tbody>
+          <tr>
+            <th>이름</th>
+            <td>박대준</td>
+          </tr>
+          <tr>
+            <th>휴대폰</th>
+            <td>0123456789</td>
+          </tr>
+          <tr>
+            <th>예약날짜</th>
+            <td>2025-02-22</td>
+          </tr>
+          <tr>
+            <th>이용서비스</th>
+            <td>짐 보관</td>
+          </tr>
+          <tr>
+            <th>이용날짜</th>
+            <td>2025-02-22</td>
+          </tr>
+          <tr>
+            <th>이용시간</th>
+            <td>10시 20분 ~ 14시 00분</td>
+          </tr>
+          <tr>
+            <th>이용물품</th>
+            <td>
+              쇼핑백/책팩 (3,000원) × 1개<br>
+              캐리어 (4,000원) × 2개<br>
+              기타 물품 : 골프가방 1개<br>
+              <span class="price-highlight">
+                총금액 : 11,000원 = 캐리어(8,000원) + 쇼핑백(3,000원)
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>문의사항 / 요청사항</th>
+            <td>깨지기 쉬우니 살살 다뤄주세요.</td>
+          </tr>
+          <tr>
+            <th>결제방법</th>
+            <td>
+              <div class="payment-method">
+                <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+                <label for="bank-transfer">무통장 입금</label>
+
+                <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+                <label for="credit-card">신용카드</label>
+
+                <input type="radio" id="cash" name="payment-method" value="cash" checked> 
+                <label for="cash">현금</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 버튼 그룹 -->
+      <div class="btn-group">
+        <button type="button" class="btn-modify">수정하기</button>
+        <button type="button" class="btn-confirm">예약하기</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 카카오톡 등 사이드 아이콘 -->
+  <div id="sdk">
+    <a href="#"><img src="/img/kakao.png" alt="카카오문의"></a>
+  </div>
+
+  <!-- 푸터 영역 (이전과 동일) -->
+  <footer>
+    <div id="f1">
+      <p>
+        <a href="/service1.html">서비스</a> |
+        <a href="/reservation.html">바로예약</a> |
+        <a href="/check.html">예약확인</a> |
+        <a href="/customer_support.html">고객지원</a> |
+        <a href="">개인정보취급방침</a>
+        <a href="" class="gotop">
+          <img src="/img/gototop.png" alt="위로가기">
+        </a>
+      </p>
+    </div>
+    <div id="f2">
+      <div id="f2-1">
+        <img src="/img/Jim guard_logo.png" alt="짐가드 로고">
+        <p>
+          상호: 짐가드 | 사업자등록번호: 707-07-7777 | 대표: 홍길동 | 주소: 대구광역시 동구 동대구로550<br>
+          전화: 053-777-7777 | 개인정보책임관리자: 홍길동 | 이메일: zimguard@naver.com<br>
+          2025 Zimguard.BlahBlahBlahBlahBlah
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

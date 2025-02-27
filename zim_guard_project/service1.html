@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/service1_support.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="top">
+                <ul id="top1">
+                    <li class="tlist">
+                        <a href="/service1.html" class="topm">서비스</a>
+                        <ul id="sm-1">
+                            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service1.html">서비스 소개</a></li>
+                            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service2.html">서비스 비용</a></li>
+                            <li><a href="/service3.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="tlist">
+                        <a href="/reservation.html" class="topm">바로예약</a>
+                    </li>
+                    <li class="tlist">
+                        <a href="/main.html" class="toplogo"><img src="img/zim guard_logo.png" alt="logo"
+                                style="width: 250px; height: 70px;"></a>
+                    </li>
+                    <li class="tlist">
+                        <a href="/check.html" class="topm">예약확인</a>
+                    </li>
+                    <li class="tlist">
+                        <a href="/customer_support.html" class="topm">고객지원</a>
+                        <ul id="sm-2">
+                            <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/customer_support.html">FAQ</a></li>
+                            <li><a href="/user_review.html">이용후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section id="content">
+            <h1>서비스 소개</h1>
+            <h5>service of zim guard</h5>
+            <div id="wrap" style="margin-top: 50px;">
+                <div id="int1">
+                    <div id="intboxs">
+                        <ul id="intbox">
+                            <div id="icon1">
+                                <img src="./img/int_icon1.png" alt=""><br>
+                                역
+                            </div>
+                            <div id="icon2">
+                                <img src="./img/int_icon_arrow.png" alt="">
+                            </div>
+                            <div id="icon3">
+                                <img src="./img/int_icon2.png" alt=""><br>
+                                숙소
+                            </div>
+                            <div id="icon4">
+                                <img src="./img/int_icon3.png" alt=""><br>
+                                터미널
+                            </div>
+                            <div id="icon5">
+                                <img src="./img/int_icon_arrow.png" alt="">
+                            </div>
+                            <div id="icon6" >
+                                <img src="./img/int_icon2.png" alt=""><br>
+                                숙소
+                            </div>
+                            <div id="icon7">
+                                <img src="./img/int_icon2.png" alt=""><br>
+                                숙소
+                            </div>
+                            <div id="icon8">
+                                <img src="./img/int_icon_arrow.png" alt="">
+                            </div>
+                            <div id="icon9">
+                                <img src="./img/int_icon2.png" alt=""><br>
+                                숙소
+                            </div>
+                        </ul>
+                    </div>
+                    <h1 style="margin-top: 67px; font-size: 36px; font-weight: 500;">짐가드 서비스란?</h1>
+                    <div id="inttext">
+                        역/터미널 수하물 보관 및 이동서비스로<br>
+                        짐케어 서비스는 여행객들의 짐(캐리어,가방,쇼핑백 등)을 보관하거나<br>
+                        역 ↔ 숙소 , 터미널 ↔ 숙소 , 숙소 ↔ 숙소 이동해드리는 서비스입니다.
+                        <br>
+                        <br>
+                        <p style="color: gray;">※ 이동서비스는 거리 제한이 있어 군위, 현풍은 이동서비스가 불가합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="sdk">
+            <a href="">
+                <img src="img/kakao.png" alt="">
+            </a>
+        </div>
+        <footer>
+            <div id="f1">
+                <p>
+                    <a href="/service1.html">서비스 |</a>
+                    <a href="/reservation.html">바로예약 |</a>
+                    <a href="/check.html">예약확인 |</a>
+                    <a href="/customer_support.html">고객지원 |</a>
+                    <a href="">개인정보취급방침</a>
+                    <a href="#" class="gotop"><img src="/img/top.png" alt=""></a>
+                </p>
+            </div>
+            <div id="f2">
+                <div id="f2-1">
+                    <img src="/img/zim guard_logo.png" alt="">
+                    <p>상호: 짐가드 | 사업자등록번호: 707-07-7777 | 대표: 홍길동 | 주소: 대구광역시 동구 동대구로550</br>
+                        전화: 053-777-7777 | 개인정보책임관리자: 홍길동 | 이메일: zimguard@naver.com</br>
+                        2025Zimguard.BlahBlahBlahBlahBlahBlahBlahBlahBlahBlah[Blah]</p>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const goTopBtn = document.querySelector(".gotop"); // "Top" 버튼 선택
+
+        goTopBtn.addEventListener("click", function (event) {
+            event.preventDefault(); // 기본 이벤트(즉시 이동) 막기
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
+</html>

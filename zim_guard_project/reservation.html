@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/9b21d8f0e7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="reservation.css">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <div id="top">
+        <ul id="top1">
+          <li class="tlist">
+            <a href="/service1.html" class="topm">서비스</a>
+            <ul id="sm-1">
+              <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service1.html">서비스 소개</a></li>
+              <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service2.html">서비스 비용</a></li>
+              <li><a href="/service3.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="tlist">
+            <a href="/reservation.html" class="topm">바로예약</a>
+          </li>
+          <li class="tlist">
+            <a href="/index.html" class="toplogo"><img src="/img/Jim guard_logo.png" alt="logo"
+                style="width: 250px; height: 70px;"></a>
+          </li>
+          <li class="tlist">
+            <a href="/check.html" class="topm">예약확인</a>
+          </li>
+          <li class="tlist">
+            <a href="/customer_support.html" class="topm">고객지원</a>
+            <ul id="sm-2">
+              <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/customer_support.html">FAQ</a></li>
+              <li><a href="/user_review.html">이용후기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+
+
+      <!-- 타이틀 섹션 -->
+      <div class="title-section">
+        <h1>예약하기</h1>
+        <p>Reservation</p>
+      </div>
+
+      <!-- 예약 폼 컨테이너 -->
+      <div class="reservation-container">
+        <form id="reservationForm">
+          <!-- 이름 입력 -->
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="고객님의 성함을 입력해주세요">
+          </div>
+
+          <!-- 휴대폰 입력 -->
+          <div class="form-group">
+            <label for="phone">휴대폰</label>
+            <input type="tel" id="phone" name="phone" placeholder="예) 010-0000-0000">
+          </div>
+
+          <!-- 이용 서비스 선택 -->
+          <div class="form-group">
+            <label for="serviceType">이용 서비스 선택</label>
+            <select id="serviceType" name="serviceType">
+              <option value="">서비스를 선택하세요</option>
+              <option value="storage">짐 보관(1일기준)</option>
+              <option value="move">짐 이동</option>
+            </select>
+          </div>
+
+          <!-- 공통: 이용 날짜(예시) -->
+          <div class="form-group">
+            <label for="serviceDate">이용 날짜</label>
+            <input type="date" id="serviceDate" name="serviceDate">
+          </div>
+
+          <!-- 짐보관 섹션 -->
+          <div class="storage-section" id="storageSection">
+            <div class="section-title">[짐 보관(1일기준)]</div>
+            <div class="section-description">
+              짐 맡길 시간과 찾을 시간을 설정하고,<br>
+              물품 종류별로 개수를 입력하세요.
+            </div>
+
+            <!-- 짐 맡길 시간 -->
+            <div class="form-group" style="display: flex; gap: 1rem;">
+              <div style="flex:1;">
+                <label for="storageHourStart">짐 맡길 시간 (시)</label>
+                <select id="storageHourStart" name="storageHourStart">
+                  <option value="">시</option>
+                  <option value="0">0시</option>
+                  <option value="1">1시</option>
+                  <option value="2">2시</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+              <div style="flex:1;">
+                <label for="storageMinuteStart">짐 맡길 시간 (분)</label>
+                <select id="storageMinuteStart" name="storageMinuteStart">
+                  <option value="">분</option>
+                  <option value="0">00분</option>
+                  <option value="30">30분</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+            </div>
+
+            <!-- 짐 찾을 시간 -->
+            <div class="form-group" style="display: flex; gap: 1rem;">
+              <div style="flex:1;">
+                <label for="storageHourEnd">짐 찾을 시간 (시)</label>
+                <select id="storageHourEnd" name="storageHourEnd">
+                  <option value="">시</option>
+                  <option value="0">0시</option>
+                  <option value="1">1시</option>
+                  <option value="2">2시</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+              <div style="flex:1;">
+                <label for="storageMinuteEnd">짐 찾을 시간 (분)</label>
+                <select id="storageMinuteEnd" name="storageMinuteEnd">
+                  <option value="">분</option>
+                  <option value="0">00분</option>
+                  <option value="30">30분</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+            </div>
+
+            <!-- 쇼핑백/책팩 수량 -->
+            <div class="form-group horizontal-group">
+              <label>쇼핑백/책팩<br>(개당 3,000원)</label>
+              <div class="horizontal-group1">
+                <input type="number" name="storageBagCount" value="0" min="0" class="quantity-input1 width[100%]">
+              </div>
+            </div>
+
+            <!-- 캐리어 수량 -->
+            <div class="form-group horizontal-group">
+              <label>캐리어<br>(개당 4,000원)</label>
+              <input type="number" name="storageCarrierCount" value="0" min="0" class="quantity-input1 width[100%]">
+            </div>
+
+            <!-- 기타 물품 -->
+            <div class="form-group horizontal-group">
+              <label>기타 물품<br>(비용별도문의)</label>
+              <input type="text" name="storageEtc" placeholder="예) 유모차 1개 등">
+            </div>
+            <!-- 안내 문구 -->
+            <p style="margin-top:1rem; color:#666; font-size:0.9rem;">
+              * 보관 이용 요금은 1일기준입니다.
+            </p>
+          </div>
+
+          <!-- 짐이동 섹션 -->
+          <div class="move-section" id="moveSection">
+            <div class="section-title">[짐 이동]</div>
+            <div class="section-description">
+              짐 맡길 시간과 찾을 시간을 설정하고,<br>
+              짐 맡길 곳/찾을 곳을 지정하세요.
+            </div>
+
+            <!-- 짐 맡길 시간 -->
+            <div class="form-group" style="display: flex; gap: 1rem;">
+              <div style="flex:1;">
+                <label for="moveHourStart">짐 맡길 시간 (시)</label>
+                <select id="moveHourStart" name="moveHourStart">
+                  <option value="">시</option>
+                  <option value="0">0시</option>
+                  <option value="1">1시</option>
+                  <option value="2">2시</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+              <div style="flex:1;">
+                <label for="moveMinuteStart">짐 맡길 시간 (분)</label>
+                <select id="moveMinuteStart" name="moveMinuteStart">
+                  <option value="">분</option>
+                  <option value="0">00분</option>
+                  <option value="30">30분</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+            </div>
+
+            <!-- 짐 찾을 시간 -->
+            <div class="form-group" style="display: flex; gap: 1rem;">
+              <div style="flex:1;">
+                <label for="moveHourEnd">짐 찾을 시간 (시)</label>
+                <select id="moveHourEnd" name="moveHourEnd">
+                  <option value="">시</option>
+                  <option value="0">0시</option>
+                  <option value="1">1시</option>
+                  <option value="2">2시</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+              <div style="flex:1;">
+                <label for="moveMinuteEnd">짐 찾을 시간 (분)</label>
+                <select id="moveMinuteEnd" name="moveMinuteEnd">
+                  <option value="">분</option>
+                  <option value="0">00분</option>
+                  <option value="30">30분</option>
+                  <!-- 필요 시 추가 -->
+                </select>
+              </div>
+            </div>
+
+            <!-- 짐 맡길 곳 / 짐 찾을 곳 -->
+            <div class="form-group" style="display: flex; gap: 1rem;">
+              <div style="flex:1;">
+                <label for="movePlaceStart">짐 맡길 곳</label>
+                <select id="movePlaceStart" name="movePlaceStart">
+                  <option value="">선택</option>
+                  <option value="인천공항">인천공항</option>
+                  <option value="김포공항">김포공항</option>
+                  <option value="서울역">서울역</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+              <div style="flex:1;">
+                <label for="movePlaceEnd">짐 찾을 곳</label>
+                <select id="movePlaceEnd" name="movePlaceEnd">
+                  <option value="">선택</option>
+                  <option value="인천공항">인천공항</option>
+                  <option value="김포공항">김포공항</option>
+                  <option value="서울역">서울역</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 쇼핑백/책팩 -->
+            <div class="form-group horizontal-group">
+              <label>쇼핑백/책팩<br>(개당 10,000원)</label>
+              <input type="number" name="moveBagCount" value="0" min="0" class="quantity-input width[100%]">
+            </div>
+            <!-- 캐리어 20~23인치 -->
+            <div class="form-group horizontal-group">
+              <label>캐리어 20~23인치<br>(개당 12,000원)</label>
+              <input type="number" name="moveCarrierMediumCount" value="0" min="0" class="quantity-input width[100%]">
+            </div>
+            <!-- 캐리어 24인치 이상 -->
+            <div class="form-group horizontal-group">
+              <label>캐리어 24인치이상<br>(개당 18,000원)</label>
+              <input type="number" name="moveCarrierLargeCount" value="0" min="0" class="quantity-input width[100%]">
+            </div>
+            <!-- 기타 물품 -->
+            <div class="form-group horizontal-group">
+              <label>기타 물품<br>(비용별도문의)</label>
+              <input type="text" name="moveEtc" placeholder="예) 골프가방 1개 등">
+            </div>
+          </div>
+
+          <!-- 문의사항 -->
+          <div class="form-group">
+            <label for="message">문의사항 및 상담 관련 요청사항</label>
+            <textarea id="message" name="message" placeholder="문의사항이나 요청사항을 자유롭게 적어주세요"></textarea>
+          </div>
+
+
+          <!-- 개인정보 처리방침 동의 -->
+          <div class="privacy-policy">
+            입력된 정보는 예약 상담 목적으로만 사용되며,
+            관련 법령에 따라 안전하게 보호됩니다. 🤔
+          </div>
+
+          <div class="form-group">
+            <label for="privacyAgree">개인정보처리방침</label>
+            <div class="sheet_yg" style="width: 100%; height: 150px; overflow: auto; user-select: auto !important;">
+              개인정보취급방침<br style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              “짐케어”(이하 “회사”라 함)은 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을
+              준수하며, 관련 법령에 의거한 개인정보취급방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다.<br style="user-select: auto !important;">
+              회사의 개인정보취급방침은 관련 법률 및 지침에 따라 변경될 수 있고 개정의 경우 7일전에 홈페이지를 통해 고지할 것 입니다.<br
+                style="user-select: auto !important;">
+              회사의 개인정보취급방침은 다음과 같은 내용을 담고 있습니다.<br style="user-select: auto !important;"><br
+                style="user-select: auto !important;">
+
+              1. 수집하는 개인정보의 항목<br style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              회사는 회원가입, 상담, 서비스 신청 및 제공 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br style="user-select: auto !important;">
+              - 이름, 이메일, 주소, 연락처, 핸드폰 번호, 아이디, 비밀번호 또한 서비스 이용과정이나 사업 처리 과정에서 아래와 같은 정보들이 생성되어 수집될 수 있습니다.<br
+                style="user-select: auto !important;">
+              - 서비스 이용기록, 접속 로그, 쿠키, 접속 IP 정보, 방문일시, 브라우저종류 및 os, 검색어, 결제기록, 이용정지 기록, 상담기록<br
+                style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              2. 개인정보의 수집 및 이용목적<br style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br style="user-select: auto !important;"><br
+                style="user-select: auto !important;">
+
+              가. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br style="user-select: auto !important;">
+              콘텐츠 제공, 물품배송 또는 청구서 등 발송, 금융거래 본인 인증 및 금융 서비스, 구매 및 요금 결재, 요금추심<br
+                style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              나. 회원 관리<br style="user-select: auto !important;">
+              회원제 서비스 이용에 따른 본인확인, 개인식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 가입 의사 확인, 가입 및 가입횟수 제한, 만14세 미만 아동 개인정보 수집 시 법정 대리인
+              동의여부 확인, 추후 법정 대리인 본인확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달<br style="user-select: auto !important;"><br
+                style="user-select: auto !important;">
+
+              다. 마케팅 및 광고에 활용<br style="user-select: auto !important;">
+              신규 서비스(제품) 개발 및 특화, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계, 이벤트 등 광고성 정보 전달<br
+                style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              3. 개인정보의 보유/이용기간<br style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다.<br style="user-select: auto !important;">
+              단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br style="user-select: auto !important;">
+              가. 회사 내부 방침에 의한 정보보유 사유<br style="user-select: auto !important;">
+              - 부정이용기록<br style="user-select: auto !important;">
+              보존 이유 : 부정 이용 방지<br style="user-select: auto !important;">
+              보존 기간 : 1년<br style="user-select: auto !important;"><br style="user-select: auto !important;">
+
+              나. 관련법령에 의한 정보보유 사유<br style="user-select: auto !important;">
+              상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는
+              보관하는
+              정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.<br style="user-select: auto !important;"><br
+                style="user-select: auto !important;">
+
+              - 계약 또는 청약철회 등에 관한 기록<br style="user-select: auto !important;">
+              보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률<br style="user-select: auto !important;">
+              보존 기간 : 5년<br style="user-select: auto !important;">
+              - 대금결제 및 재화 등의 공급에 관한 기록<br style="user-select: auto !important;">
+              보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률<br style="user-select: auto !important;">
+              보존 기간 : 5년<br style="user-select: auto !important;">
+              - 소비자의 불만 또는 분쟁처리에 관한 기록<br style="user-select: auto !important;">
+              보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률<br style="user-select: auto !important;">
+              보존 기간 : 3년<br style="user-select: auto !important;">
+              - 본인확인에 관한 기록<br style="user-select: auto !important;">
+              보존 이유 : 정보통신 이용촉진 및 정보보호 등에 관한 법률<br style="user-select: auto !important;">
+              보존 기간 : 6개월<br style="user-select: auto !important;">
+              - 방문에 관한 기록<br style="user-select: auto !important;">
+              보존 이유 : 통신비밀보호법<br style="user-select: auto !important;">
+              보존 기간 : 3개월
+            </div>
+          </div>
+          <span>개인정보 제공에 동의합니다.</span>
+          <input type="checkbox" id="privacyAgree" name="privacyAgree">
+          <!-- 개인정보 처리방침 전문 토글 영역 -->
+
+
+
+          <!-- 예약하기 버튼 -->
+          <button type="submit" class="submit-btn">
+            예약하기
+          </button>
+        </form>
+      </div>
+
+    </section>
+    <div id="sdk">
+      <a href=""><img src="/img/kakao.png" alt=""></a>
+    </div>
+    <footer>
+      <div id="f1">
+        <p>
+          <a href="/service1.html">서비스</a> |
+          <a href="/reservation.html">바로예약</a> |
+          <a href="/check.html">예약확인</a> |
+          <a href="/customer_support.html">고객지원</a> |
+          <a href="">개인정보취급방침</a>
+          <a href="" class="gotop">
+            <img src="/img/gototop.png" alt="위로가기">
+          </a>
+        </p>
+      </div>
+      <div id="f2">
+        <div id="f2-1">
+          <img src="/img/Jim guard_logo.png" alt="">
+          <p>상호: 짐가드 | 사업자등록번호: 707-07-7777 | 대표: 홍길동 | 주소: 대구광역시 동구 동대구로550</br>
+            전화: 053-777-7777 | 개인정보책임관리자: 홍길동 | 이메일: zimguard@naver.com</br>
+            2025Zimguard.BlahBlahBlahBlahBlahBlahBlahBlahBlahBlah[Blah]</p>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    /*
+      [서비스 선택 시 DOM 토글]
+      - #serviceType의 값이 'storage'면 .storage-section만 active
+      - 'move'면 .move-section만 active
+      - 그 외는 모두 비활성화
+    */
+    const $comment = document.getElementById('comment');
+    const $phone = document.getElementById('phone');
+    const $serviceType = document.getElementById('serviceType');
+    const $serviceDate = document.getElementById('serviceDate');
+    const $storageHourStart = document.getElementById('storageHourStart');
+    const $storageMinuteStart = document.getElementById('storageMinuteStart');
+    const $storageHourEnd = document.getElementById('storageHourEnd');
+    const $storageMinuteEnd = document.getElementById('storageMinuteEnd');
+    const $storageBagCount = document.getElementById('storageBagCount');
+    const $storageCarrierCount = document.getElementById('storageCarrierCount');
+    const $storageEtc = document.getElementById('storageEtc');
+    const $moveHourStart = document.getElementById('moveHourStart');
+    const $moveMinuteStart = document.getElementById('moveMinuteStart');
+    const $moveHourEnd = document.getElementById('moveHourEnd');
+    const $moveMinuteEnd = document.getElementById('moveMinuteEnd');
+    const $movePlaceStart = document.getElementById('movePlaceStart');
+    const $movePlaceEnd = document.getElementById('movePlaceEnd');
+    const $moveBagCount = document.getElementById('moveBagCount');
+    const $moveCarrierMediumCount = document.getElementById('moveCarrierMediumCount');
+    const $moveCarrierLargeCount = document.getElementById('moveCarrierLargeCount');
+    const $moveEtc = document.getElementById('moveEtc');
+    const $privacyAgree = document.getElementById('privacyAgree');
+    const $serviceSelect = document.getElementById('serviceType');
+    const $storageSection = document.getElementById('storageSection');
+    const $moveSection = document.getElementById('moveSection');
+    const $reservationForm = document.getElementById('reservationForm');
+
+    $serviceSelect.addEventListener('change', function () {
+      const selectedValue = this.value;
+
+      // 모든 섹션에서 active 제거
+      $storageSection.classList.remove('active');
+      $moveSection.classList.remove('active');
+
+      if (selectedValue === 'storage') {
+        $storageSection.classList.add('active');
+      } else if (selectedValue === 'move') {
+        $moveSection.classList.add('active');
+      }
+      // '서비스를 선택하세요'나 그 외의 값은 아무 섹션도 보여주지 않음
+    });
+
+    /*
+      [간단한 폼 유효성 검사]
+      - 이름/휴대폰 필수 입력
+      - 개인정보 처리방침 체크
+    */
+    $reservationForm.addEventListener('submit', function (event) {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const privacyAgree = document.getElementById('privacyAgree').checked;
+
+      if (!name || !phone) {
+        alert('이름과 휴대폰 번호를 입력해주세요.');
+        event.preventDefault();
+        return;
+      }
+
+      if (!privacyAgree) {
+        alert('개인정보처리방침에 동의해주세요.');
+        event.preventDefault();
+        return;
+      }
+
+      const phoneRegex = /^\d{3}-\d{3,4}-\d{4}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('휴대폰 번호 형식이 올바르지 않습니다. (예: 010-1234-5678)');
+        event.preventDefault();
+        return;
+      }
+
+    });
+
+    // '개인정보 처리방침 전문 보기' 버튼 클릭 시 본문 토글
+    const $toggleBtn = document.getElementById('privacyPolicyToggle');
+    const $policyContent = document.getElementById('privacyPolicyContent');
+
+    $toggleBtn.addEventListener('click', function () {
+      // active 클래스를 토글하여 접고/펼침
+      $policyContent.classList.toggle('active');
+    });
+
+
+
+  </script>
+</body>
+
+</html>

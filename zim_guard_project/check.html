@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>예약확인</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="check.css">
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 영역 -->
+    <header>
+      <div id="top">
+        <ul id="top1">
+          <li class="tlist">
+            <a href="/service1.html" class="topm">서비스</a>
+            <ul id="sm-1" class="sm">
+              <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service1.html">서비스 소개</a></li>
+              <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/service2.html">서비스 비용</a></li>
+              <li><a href="service3.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="tlist">
+            <a href="/reservation.html" class="topm">바로예약</a>
+          </li>
+          <li class="tlist">
+            <a href="/index.html" class="toplogo">
+              <img src="/img/Jim guard_logo.png" alt="logo" style="width:250px; height:70px;">
+            </a>
+          </li>
+          <li class="tlist">
+            <a href="/check.html" class="topm">예약확인</a>
+          </li>
+          <li class="tlist">
+            <a href="/customer_support.html" class="topm">고객지원</a>
+            <ul id="sm-2" class="sm">
+              <li style="border-bottom: 0.5px solid rgba(192, 192, 192,0.7);"><a href="/customer_support.html">FAQ</a></li>
+              <li><a href="/user_review.html">이용후기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 본문 영역 -->
+    <section>
+
+      <div class="title-section">
+        <h1>예약확인</h1>
+        <p class="subtitle">Reservation</p>
+      </div>
+
+      <!-- 예약확인 컨테이너 -->
+      <div class="check-container">
+
+        <form id="checkForm" onsubmit="return checkValidation(event)">
+          <!-- 이름 -->
+          <div class="form-group">
+            <label for="userName">이름</label>
+            <input type="text" id="userName" name="userName" placeholder="고객님의 성함을 입력해주세요">
+          </div>
+          <!-- 휴대폰 -->
+          <div class="form-group">
+            <label for="userPhone">휴대폰</label>
+            <input type="tel" id="userPhone" name="userPhone" placeholder="예) 010-0000-0000">
+          </div>
+
+          <!-- 개인정보 처리방침 안내문 -->
+          <div class="form-group">
+            <label>개인정보처리방침</label>
+            <div class="policy-box">
+              “짐케어”(이하 “회사”라 함)은 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에
+              관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을
+              준수하며, 관련 법령에 의거한 개인정보취급방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다.
+              <br><br>
+              (중략) 이용자는 개인정보 제공에 동의하지 않을 권리가 있으나,
+              동의 거부 시 서비스 이용이 제한될 수 있습니다.
+            </div>
+          </div>
+
+          <!-- 동의 체크박스 -->
+          <div class="agree-check">
+            <input type="checkbox" id="agreePolicy" name="agreePolicy">
+            <label for="agreePolicy">개인정보 제공에 동의합니다.</label>
+          </div>
+
+          <!-- 예약조회 버튼 -->
+          <button type="submit" class="submit-btn"><a href="/reservation_info.html">예약조회</a></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 사이드 아이콘 (카카오톡 등) -->
+    <div id="sdk">
+      <a href=""><img src="/img/kakao.png" alt="카카오문의"></a>
+    </div>
+
+    <!-- 푸터 영역 -->
+    <footer>
+      <div id="f1">
+        <p>
+          <a href="/service1.html">서비스</a> |
+          <a href="/reservation.html">바로예약</a> |
+          <a href="/check.html">예약확인</a> |
+          <a href="/customer_support.html">고객지원</a> |
+          <a href="">개인정보취급방침</a>
+          <a href="" class="gotop">
+            <img src="/img/top.png" alt="위로가기">
+          </a>
+        </p>
+      </div>
+      <div id="f2">
+        <div id="f2-1">
+          <img src="/img/Jim guard_logo.png" alt="짐가드 로고">
+          <p>
+            상호: 짐가드 | 사업자등록번호: 707-07-7777 | 대표: 홍길동 | 주소: 대구광역시 동구 동대구로550<br>
+            전화: 053-777-7777 | 개인정보책임관리자: 홍길동 | 이메일: zimguard@naver.com<br>
+            2025 Zimguard.BlahBlahBlahBlahBlah
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function checkValidation(e) {
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      const agree = document.getElementById('agreePolicy').checked;
+
+      if (!name) {
+        alert('이름을 입력해주세요.');
+        e.preventDefault();
+        return false;
+      }
+      if (!phone) {
+        alert('휴대폰 번호를 입력해주세요.');
+        e.preventDefault();
+        return false;
+      }
+      // 간단한 휴대폰 형식 검사(예: 010-1234-5678)
+      const phoneRegex = /^\d{3}-\d{3,4}-\d{4}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('휴대폰 번호 형식이 올바르지 않습니다. 예) 010-1234-5678');
+        e.preventDefault();
+        return false;
+      }
+      if (!agree) {
+        alert('개인정보 제공에 동의해주세요.');
+        e.preventDefault();
+        return false;
+      }
+      // 정상적으로 제출
+      alert('예약 내역을 조회합니다!');
+      return true;
+    }
+  </script>
+</body>
+
+</html>
