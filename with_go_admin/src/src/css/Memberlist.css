@@ -1,0 +1,138 @@
+.content2 {
+  flex: 1;
+  padding: 50px 60px 0;
+}
+
+.sidebar {
+  min-width: 250px;
+}
+
+.Memberlist_top {
+  padding: 0 0 25px 0;
+  color: rgb(0, 102, 204);
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+.Memberlist_content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.Memberlist_search {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+th {
+  background-color: #f0f2f5;
+  font-weight: bold;
+}
+
+tr {
+  cursor: auto;
+}
+
+.pagination2 {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 10px;
+  }
+  .pagination2 button {
+    padding: 6px 11px;
+    border-radius: 3px;
+    background-color: #fffefe;
+    color: #5e5e5e;
+    border: 1px solid #f4f4f4;
+    cursor: pointer;
+  }
+  .pagination2 button.active {
+    background-color: rgb(0, 102, 204);
+    color: white;
+    font-weight: bold;
+  }
+  /* .pagination i {
+    font-size: 14px;
+  } */
+  .pagination2 button:disabled {
+    opacity: 0.5;
+    /* cursor: not-allowed; */
+  }
+  
+  .page-btn2 {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .page-btn2:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .page-btn2.active {
+    background-color: #0066cc;
+    color: #fff;
+    font-weight: bold;
+    border-color: #0066cc;
+  }
+  
+  .arrow2-btn {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #5e5e5e;
+    transition: all 0.2s ease;
+  }
+  
+  .arrow-btn2:hover {
+    transform: translateY(-2px);
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  
+  .arrow-btn2:disabled {
+    background-color: #f0f0f0;
+    color: #aaa;
+    cursor: default;
+    opacity: 0.7;
+  }
+  
+  .arrow-btn2 i {
+    font-size: 16px;
+  }
+
+  .foot_btn {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    width: 100%;  /* 부모 컨테이너의 너비를 100%로 설정 */
+    padding: 10px 0;
+  }
+  
+  .btn_delete {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px;
+    background-color: rgb(158, 158, 158);
+    color: white;
+  }
+  
+  .btn_delete:hover {
+    background-color: rgb(247, 55, 79);
+  }
+  
+  tfoot td {
+    text-align: right;  /* 오른쪽 정렬 */
+  }
+  

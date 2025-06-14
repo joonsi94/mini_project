@@ -1,0 +1,59 @@
+/* 폼 전체 */
+.form_Create {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 각 그룹 */
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 레이블 */
+.group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 인풋 필드 */
+.group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.group input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    padding-right: 10px;
+}
+
+.btn-standard {
+    background-color: rgb(158, 158, 158);
+}
+
+.btn-standard:hover {
+    background-color: rgb(0, 102, 204);
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+}

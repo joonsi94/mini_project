@@ -1,0 +1,83 @@
+
+.inquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.inquiry-table th,
+.inquiry-table td {
+    vertical-align: middle;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* 체크박스 칸 */
+.inquiry-table th:first-child,
+.inquiry-table td:first-child {
+    width: 80px;
+    padding: 0 10px;
+    text-align: center;
+}
+.inquiry-table td:first-child .ant-checkbox-wrapper,
+.inquiry-table td:first-child .ant-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* 제목/내용만 좌측 정렬 */
+.inquiry-col-title {
+    width: 20%;
+    text-align: left !important;
+    padding-left: 10px;
+}
+.inquiry-col-content {
+    width: 30%;
+    text-align: left !important;
+    padding-left: 10px;
+}
+
+.inquiry-table th {
+    background-color: #f0f2f5;
+    font-weight: bold;
+}
+
+/* 각 열 너비 설정 */
+.inquiry-col-number {
+    width: 8%;
+}
+.inquiry-col-category {
+    width: 10%;
+}
+.inquiry-col-writer,
+.inquiry-col-date,
+.inquiry-col-status {
+    width: 20%;
+}
+.inquiry-col-actions {
+    width: 12%;
+}
+
+/* 내용 토글 박스 */
+.inquiry-toggle-box {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+}
+.inquiry-toggle-box.open {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    word-break: break-word;
+}
+

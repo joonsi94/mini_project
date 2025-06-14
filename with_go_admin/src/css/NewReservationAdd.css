@@ -1,0 +1,64 @@
+.customerList {
+    margin-left: 10px;
+    width: 3rem;
+    height: 32px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #787878;
+}
+
+.customerList:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.separated-form-item {
+    display: flex; /* Flex 컨테이너로 설정하여 label과 control을 가로로 배치 */
+    align-items: flex-start; /* label과 control의 세로 정렬을 시작점으로 맞춤 (필요에 따라 변경) */
+    margin-bottom: 15px; /* 각 Form.Item 간의 간격 */
+    margin-left: 25px;
+    width: 100%;
+    gap: 5px;
+}
+
+.separated-form-item .ant-form-item-label {
+    width: 70px; /* label의 고정 너비 (원하는 값으로 조정) */
+    margin-right: 20px; /* label과 control 사이의 간격 (원하는 값으로 조정) */
+    text-align: left; /* label 텍스트 정렬 (기본값은 오른쪽) */
+}
+
+.separated-form-item .ant-form-item-control-wrapper {
+    flex: 1; /* control이 남은 공간을 차지하도록 함 */
+}
+
+.speech-bubble {
+    background-color: #FFA500; /* 주황색 배경 */
+    color: white; /* 텍스트 색상 */
+    padding: 10px 12px; /* 내부 여백 */
+    border-radius: 10px; /* 둥근 모서리 */
+    position: relative; /* 꼬리 부분을 위한 기준 위치 설정 */
+    margin-left: 15px; /* 체크박스와의 간격 */
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px; /* 말풍선 왼쪽 바깥으로 꼬리 위치 조정 */
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-right: 10px solid #FFA500; /* 꼬리 색상 (배경색과 동일) */
+    border-bottom: 10px solid transparent;
+}
+
+/*.ant-form-item .separated-form-item .css-dev-only-do-not-override-1261szd{*/
+/*    width: 100%;*/
+/*}*/
+
+.ant-col .ant-form-item-label .css-dev-only-do-not-override-1261szd .ant-form-item-no-colon{
+    display: flex;
+    align-items: center;
+}
+

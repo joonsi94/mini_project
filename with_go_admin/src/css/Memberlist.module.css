@@ -1,0 +1,156 @@
+.content2 {
+  flex: 1;
+  padding: 70px 60px 0;
+}
+
+.Memberlist_top {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(0, 102, 204);
+}
+
+.Memberlist_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Memberlist_search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pagination2 {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 10px;
+}
+
+.pagination2 button {
+  padding: 6px 11px;
+  border-radius: 3px;
+  background-color: #fffefe;
+  color: #5e5e5e;
+  border: 1px solid #f4f4f4;
+  cursor: pointer;
+}
+
+.pagination2 button.active {
+  background-color: rgb(0, 102, 204);
+  color: white;
+  font-weight: bold;
+}
+
+.pagination2 button:disabled {
+  opacity: 0.5;
+}
+
+.page_btn2 {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page_btn2:hover {
+  background-color: #0056b3;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.page_btn2_active {
+  background-color: #0066cc !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-color: #0066cc !important;
+}
+
+.arrow2_btn {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #5e5e5e;
+  transition: all 0.2s ease;
+}
+
+.arrow_btn2:hover {
+  transition: all 0.2s ease;
+  transform: translateY(-2px);
+  background-color: #0056b3;
+  color: white;
+}
+
+.arrow_btn2:disabled {
+  transform: translateY(0px);
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: default;
+  opacity: 0.7;
+}
+
+.arrow_btn2 i {
+  font-size: 16px;
+}
+
+.foot_btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.delete {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_delete {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 4px;
+  background-color: rgb(158, 158, 158);
+  color: white;
+}
+
+.btn_delete:hover {
+  background-color: rgb(247, 55, 79);
+}
+
+tfoot td {
+  text-align: right;
+}
+
+.th_first {
+  width: 1% !important;
+}
+
+.mtable tr {
+  cursor: auto;
+}
+
+.mtable {
+  overflow: hidden;
+  overflow-x: auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mtable {
+    overflow: hidden;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .searchin {
+    width: 180px !important;
+  }
+}

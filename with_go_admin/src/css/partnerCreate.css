@@ -1,0 +1,37 @@
+/* 폼 전체 */
+.form_Create {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 각 그룹 */
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 레이블 */
+.group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 인풋 필드 */
+.group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.group input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}

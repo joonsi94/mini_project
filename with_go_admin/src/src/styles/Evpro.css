@@ -1,0 +1,123 @@
+.main {
+    flex-grow: 1;
+    padding: 50px 60px 0;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(0, 102, 204);
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(0, 102, 204);
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f0f2f5;
+    font-weight: bold;
+}
+
+.col-title {
+    width: 25%;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.col-date {
+    width: 20%;
+    text-align: center;
+}
+
+.col-link {
+    width: 25%;
+    text-align: center;
+}
+
+.col-status {
+    width: 15%;
+    text-align: center;
+}
+
+.col-actions {
+    width: 15%;
+    text-align: center;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.btn-edit {
+    background-color: rgb(158, 158, 158);
+    color: white;
+}
+
+.btn-delete {
+    background-color: rgb(158, 158, 158);
+    color: white;
+}
+
+.btn-add {
+    width: 115px;
+    height: 30px;
+    background-color: rgb(0, 102, 204);
+    color: white;
+    margin-right: 55px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-button-wrapper {
+    margin-top: 10px;
+    text-align: right;
+}
+

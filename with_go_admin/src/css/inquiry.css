@@ -1,0 +1,69 @@
+.inquiry-table {
+    width: 100%;
+    min-width: 1100px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.inquiry-table th,
+.inquiry-table td {
+    vertical-align: middle;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    text-align: center;
+}
+
+.inquiry-table th:first-child,
+.inquiry-table td:first-child {
+    width: 6%;
+    text-align: center;
+}
+.inquiry-table td:first-child .ant-checkbox-wrapper,
+.inquiry-table td:first-child .ant-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.inquiry-table th {
+    background-color: #f0f2f5;
+    font-weight: bold;
+}
+
+.inquiry-col-number { width: 5%; }
+.inquiry-col-category { width: 6%; }
+.inquiry-col-title { width: 14%; text-align: left !important; padding-left: 10px; }
+.inquiry-col-content { width: 17%; text-align: left !important; padding-left: 10px; }
+.inquiry-col-writer { width: 10%; }
+.inquiry-col-password { width: 6%; }
+.inquiry-col-date { width: 8%; }
+.inquiry-col-status { width: 7%;  }
+.inquiry-col-actions { width: 7%; }
+
+.inquiry-toggle-box {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+}
+.inquiry-toggle-box.open {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: visible;
+    text-overflow: initial;
+}
+
+/* 선택삭제 버튼, 페이지네이션 스타일 추가 */
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}

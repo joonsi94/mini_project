@@ -1,0 +1,67 @@
+.common-table {
+  width: 100%;
+  min-width: 1100px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.common-table th,
+.common-table td {
+  padding: 16px;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.faq-col-title,
+.faq-col-content {
+  text-align: left !important;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.faq-col-select  { width: 4%; }
+.faq-col-type    { width: 4%; }
+.faq-col-title   { width: 26%; }
+.faq-col-content { width: 30%; }
+.faq-col-status  { width: 7%; }
+.faq-col-date    { width: 7%; }
+.faq-col-actions { width: 10%; }
+
+.answer-toggle {
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: max-height 0.3s ease;
+  max-height: 32px;
+  line-height: 1.5;
+}
+
+.answer-toggle.open {
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 500px;
+  overflow: auto;
+  line-height: 1.6;
+}
+
+.table-footer.bottom-right-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding-right: 35px;
+  margin-top: 16px;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}

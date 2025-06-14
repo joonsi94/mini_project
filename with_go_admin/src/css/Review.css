@@ -1,0 +1,130 @@
+.review-col-title,
+.review-col-content {
+  text-align: left !important;
+}
+
+.col-select { width: 5%; }
+.col-title { width: 18%; text-align: left; padding-left: 30px; }
+.col-content { width: 28%; text-align: left; padding-left: 16px; }
+.col-writer { width: 10%; }
+.col-date { width: 13%; }
+.col-type { width: 7%; }
+.col-status { width: 12%; }
+.col-actions {
+    width: 6%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.review-table th,
+.review-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  height: 56px;
+}
+
+
+.review-col-title {
+  width: 25%;
+  padding-left: 30px;
+}
+
+.review-col-content {
+  width: 35%;
+  white-space: normal !important;
+  overflow: visible !important;
+  padding-right: 16px;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+.review-col-select { width: 7%; }
+.review-col-writer { width: 10%; }
+.review-col-date   { width: 13%; }
+.review-col-type   { width: 7%; }
+.review-col-status { width: 10%; }
+.review-col-visible { width: 90px; text-align: center; }
+.review-col-actions {
+  width: 12%;
+  text-align: center;
+  vertical-align: middle;
+  padding-right: 20px;
+}
+
+.review-expanded-row td {
+  background: none;
+  text-align: left;
+  padding: 16px 16px 16px 46px;
+  font-size: 15px;
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+}
+
+.review-best {
+  background-color: #fff7d6;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.btn-best {
+  border: 1px solid;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 4px 14px;
+  font-size: 14px;
+  min-width: 56px;
+  text-align: center;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn-best.blue {
+  color: rgb(0, 102, 204);
+  border-color: rgb(0, 102, 204);
+}
+
+.btn-best.blue:hover {
+  background-color: rgb(0, 102, 204);
+  color: white;
+}
+
+.btn-best.orange {
+  background-color: #ff9900;
+  color: white;
+  border-color: #ff9900;
+}
+
+.btn-best.orange:hover {
+  background-color: #fab34a;
+  color: white;
+}
+
+.review-toggle-box {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.review-toggle-box.open {
+  white-space: pre-wrap;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.review-delete-btn-box {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 16px;
+  box-sizing: border-box;
+}

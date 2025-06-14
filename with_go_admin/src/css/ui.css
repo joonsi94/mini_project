@@ -1,0 +1,202 @@
+.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-edit {
+    background-color: rgb(79, 23, 135);
+}
+.btn-edit:hover {
+    background-color: rgb(24, 1, 97);
+}
+
+.btn-delete {
+    background-color: rgb(158, 158, 158);
+}
+.btn-delete:hover {
+    background-color: rgb(247, 55, 79);
+}
+
+.btn-add-event {
+    background-color: rgb(158, 158, 158);
+}
+.btn-add-event:hover {
+    background-color: rgb(0, 102, 204);
+}
+
+.btn-add-confirm {
+    background-color: rgb(158, 158, 158);
+}
+.btn-add-confirm:hover {
+    background-color: rgb(0, 102, 204);
+}
+
+.btn-edit-confirm2 {
+    background-color: rgb(158, 158, 158);
+}
+.btn-edit-confirm2:hover {
+    background-color: rgb(0, 102, 204);
+}
+
+.btn-back {
+    background-color: rgb(92, 92, 92);
+}
+.btn-back:hover {
+    background-color: #373737;
+    color: white;
+}
+
+.btn-best {
+    border: 1px solid;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 4px 14px;
+    font-size: 14px;
+    min-width: 56px;
+    text-align: center;
+    transition: all 0.2s ease, transform 0.2s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn-best:hover {
+    transform: translateY(-2px);
+}
+
+.btn-best.blue {
+    color: rgb(0, 102, 204);
+    border-color: rgb(0, 102, 204);
+}
+
+.btn-best.blue:hover {
+    background-color: rgb(0, 102, 204);
+    color: white;
+}
+
+.btn-best.orange {
+    background-color: #ff9900;
+    color: white;
+    border-color: #ff9900;
+}
+
+.btn-best.orange:hover {
+    background-color: #fab34a;
+    color: white;
+}
+
+.review-best,
+.event-active-row {
+    background-color: #fff7d6;
+    font-weight: 500;
+}
+
+.event-active-row {
+    font-weight: bold;         /* 볼드체 */
+    color: #ff9900;            /* 오렌지 텍스트 */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form textarea,
+.form select {
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.custom-select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 40px 10px 14px;
+}
+.select-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: gray;
+}
+
+.form-button-wrapper,
+.notice-add-button-wrapper,
+.event-add-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    padding-right: 10px;
+}
+
+tfoot td {
+    border-bottom: none !important;
+    padding-top: 16px;
+}
+tfoot td .notice-add-button-wrapper,
+tfoot td .table-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 0;
+    height: 56px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.bottom-right-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.default-style .ant-btn-primary {
+    background-color: #fff;
+    color: #7a7a7a;
+    border: 1px solid #d9d9d9;
+}
+
+.default-style .ant-btn-primary:hover {
+    background-color: #f5f5f5;
+    border-color: #bfbfbf;
+    color: #656565;
+}

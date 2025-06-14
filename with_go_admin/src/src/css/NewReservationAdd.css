@@ -1,0 +1,36 @@
+.aa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.customerList {
+    margin-left: 10px;
+    width: 3rem;
+    height: 32px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #787878;
+}
+
+.separated-form-item {
+    display: flex; /* Flex 컨테이너로 설정하여 label과 control을 가로로 배치 */
+    align-items: flex-start; /* label과 control의 세로 정렬을 시작점으로 맞춤 (필요에 따라 변경) */
+    margin-bottom: 24px; /* 각 Form.Item 간의 간격 */
+
+}
+
+.separated-form-item .ant-form-item-label {
+    width: 70px; /* label의 고정 너비 (원하는 값으로 조정) */
+    margin-right: 20px; /* label과 control 사이의 간격 (원하는 값으로 조정) */
+    text-align: left; /* label 텍스트 정렬 (기본값은 오른쪽) */
+    margin-left: 15px;
+}
+
+.separated-form-item .ant-form-item-control-wrapper {
+    flex: 1; /* control이 남은 공간을 차지하도록 함 */
+}
+
