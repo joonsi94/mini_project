@@ -1,0 +1,112 @@
+.origin_dir{
+    position:relative;
+    &::after{
+        content:"";
+        position:absolute;
+        top:0;
+        right:min(15%,3em);
+        width:4px;
+        height:100%;
+        background-color:blue;
+    }
+}
+
+.reverse_dir{
+    position:relative;
+    &::after{
+        content:"";
+        position:absolute;
+        top:0;
+        right:min(15%,3em);
+        width:4px;
+        height:100%;
+        background-color:red;
+    }
+}
+
+.sticky_side_btn{
+    position:sticky;
+    bottom: 10%;
+    cursor:pointer;
+    z-index: 1000;
+    rotate: 180deg;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+.jh_sideSelectedStopList {
+    &>div>div{
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+        &>ul{
+            width:100%;
+        }
+    }
+}
+.jh_side_open{
+    justify-items:end;
+}
+.jh_side_close{
+    justify-items:end;
+    rotate: 180deg;
+}
+.side_li_border{
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+.side_list_border>div>div>ul>li:last-child{
+    border-bottom: none !important;
+}
+.toggleBtn{
+    transition : all 0.7s linear;
+}
+.upper_btn{
+    animation:upper_blink 0.7s infinite;
+}
+.lower_btn{
+    animation:lower_blink 0.7s infinite;
+}
+.upper_change{
+    animation:upper_blink 0.7s infinite,upper_change .4s linear;
+}
+.lower_change {
+    animation:lower_blink 0.7s infinite,lower_change .4s linear;
+}
+@keyframes upper_change{
+    0%{
+        transform:rotate(-225deg);
+    }
+    100%{
+        transform:rotate(-45deg);
+    }
+}
+@keyframes lower_change{
+    0%{
+        transform:rotate(-45deg);
+    }
+    100%{
+        transform:rotate(-225deg);
+    }
+}
+@keyframes upper_blink{
+    0%{
+        transform:translateY(0) rotate(-45deg);
+    }
+    50%{
+        transform:translateY(-5px) rotate(-45deg);
+    }
+    100%{
+        transform:translateY(0) rotate(-45deg);
+    }
+}
+
+@keyframes lower_blink{
+    0%{
+        transform:translateY(0) rotate(-225deg);
+    }
+    50%{
+        transform:translateY(-5px) rotate(-225deg);
+    }
+    100%{
+        transform:translateY(0) rotate(-225deg);
+    }
+}
