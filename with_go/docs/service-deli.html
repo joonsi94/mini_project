@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/service-deli.css">
+    <script src="https://kit.fontawesome.com/c2939216d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        var supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+<body>
+<div class="header"></div>
+<div class="header-image"><h3>DELIVERY WITH GO</h3></div>
+<div id="container">
+
+    <h1 class="title">캐리어 배송 서비스 및 이용안내</h1>
+    <p class="sub-title">
+        짐 걱정 없이, 여행의 시작부터 끝까지 편리하게!<br/>
+        위드고 캐리어 배송 서비스로, 공항(역)에서 숙소까지 <strong>짐 없이 가볍고 자유롭게</strong> 이동하세요!
+    </p>
+    <div class="local">
+        <div class="local-icon">
+            <img class="local-img" src="./src/images/gyeongju.png" alt="경주">
+            <h3 class="local-txt-k">경주</h3>
+            <p class="local-txt-e">GYEONGJU</p>
+        </div>
+        <div class="local-icon2">
+            <img class="local-img" src="./src/images/daegu.png" alt="대구">
+            <h3 class="local-txt-k">대구</h3>
+            <p class="local-txt-e">DAEGU</p>
+        </div>
+        <div class="local-icon3">
+            <img class="local-img" src="./src/images/seoul.png" alt="서울">
+            <h3 class="local-txt-k">서울</h3>
+            <p class="local-txt-e">SEOUL</p>
+        </div>
+    </div>
+    <div class="how-to">
+        <div class="how-to-use2">
+            <div class="use-icon">
+                <h3 class="use-tit">예약하기</h3>
+                <img src="src/images/smartphone.png" alt="예약등록">
+                <p class="use-txt">장소와 시간 선택</p>
+                <p class="use-step">STEP01</p>
+            </div>
+            <div class="use-icon">
+                <h3 class="use-tit">결제하기</h3>
+                <img src="src/images/mobile-payment.png" alt="이용요금 결제">
+                <p class="use-txt">온라인으로 간편결제</p>
+                <p class="use-step">STEP02</p>
+            </div>
+            <div class="use-icon">
+                <h3 class="use-tit">보관하기</h3>
+                <img src="src/images/placeholder.png" alt="여행짐 픽업">
+                <p class="use-txt">원하는 장소에 짐 맡기기</p>
+                <p class="use-step">STEP03</p>
+            </div>
+            <div class="use-icon">
+                <h3 class="use-tit">찾기</h3>
+                <img src="src/images/id-card.png" alt="여행짐 수령">
+                <p class="use-txt">본인 확인 후 짐 수령</p>
+                <p class="use-step">STEP04</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="title">부담 없이 이용하는 최적의 요금</h1>
+    <p class="sub-title">짐의 크기와 목적지에 따라 맞춤 요금을 적용합니다.</p>
+    <div class="group-img">
+    <img src="src/images/group.png" alt="">
+    </div>
+    <div class="td">
+        <table class="price-td">
+            <tr>
+                <td rowspan="2">구분</td>
+                <th>26"이하</th>
+                <th>26"초과</th>
+            </tr>
+            <tr>
+<!--            <td>출발지</td>-->
+                <td class="price-local">대구전지역</td>
+                <td class="price-local">경주전지역</td>
+            </tr>
+            <tr>
+                <td class="price-start">대구공항 / 동대구역 출발</td>
+                <td class="price-txt">10,000</td>
+                <td class="price-txt">15,000</td>
+            </tr>
+            <tr>
+                <td class="price-start">경주역 출발</td>
+                <td class="price-txt">20,000</td>
+                <td class="price-txt">25,000</td>
+            </tr>
+        </table>
+    </div>
+    <h1 class="title">이용 시간 확인하고 배송은 더 스마트하게!</h1>
+    <p class="sub-title">정해진 시간 내 도착 보장! 안심하고 이용하세요.</p>
+    <div class="timeofs">
+        <div class="timewrap1"><!--  공항역 숙소-->
+            <img class="timeofs-tit" src="src/images/price2.png" alt="">
+            <ul>
+                <li class="timeofs-1li">
+                    <p>당일 배송</p>
+                    <div>
+                        <ul>
+                            <li class="timeofs-2li">예약 : 배송일 ~14시까지 (타지역:13시까지)</li>
+                            <li class="timeofs-2li" style="line-height: 25px">방문 접수 & 픽업 : 배송일 07시 ~ 14시까지 <br/> (타지역:13시까지)</li>
+                            <li class="timeofs-2li">숙소 수령 : 배송일 15시 ~ 17시까지</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeofs-1li">
+                    <p>익일 배송</p>
+                    <div>
+                        <ul>
+                            <li class="timeofs-2li">예약 : 배송전일 ~07시까지</li>
+                            <li class="timeofs-2li">방문 접수 & 픽업 : 배송전일 09시 ~ 14시까지</li>
+                            <li class="timeofs-2li">숙소 수령 : 배송일 15시 ~ 17시까지</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div><!--공항역 숙소-->
+        <div class="timewrap2"><!--  숙소에서 공항-->
+            <img class="timeofs-tit" src="src/images/price1.png" alt="">
+            <ul>
+                <li class="timeofs-1li">
+                    <p>당일 배송</p>
+                    <div>
+                        <ul>
+                            <li class="timeofs-2li">예약 : 배송일 ~11시까지</li>
+                            <li class="timeofs-2li">방문 접수 & 픽업 : 배송일 09시 ~ 12시까지</li>
+                            <li class="timeofs-2li">공항 수령 : 배송일 15시 ~ 17시까지</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeofs-1li">
+                    <p>익일 배송</p>
+                    <div>
+                        <ul>
+                            <li class="timeofs-2li">예약 : 배송전일 ~07시까지</li>
+                            <li class="timeofs-2li">방문 접수 & 픽업 : 배송전일 09시 ~ 12시까지</li>
+                            <li class="timeofs-2li" style="line-height: 25px">공항 수령 : 배송일 05시 ~ 15시까지 <br/>(15시 이후 별도 보관)</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div><!--숙소에서 공항-->
+    </div>
+    <div class="notice">
+        <div class="notice-img">
+            <img src="src/images/please.png">
+        </div>
+        <div class="notice-txt">
+            <ul>
+                <li class="test">이용하시는 장소에 따라 짐을 맡기고 찾는 시간을 반드시 준수해 주새요.</li>
+                <li class="test">배송은 순차적으로 시작됩니다.</li>
+                <li class="test">기사님이 방문하신 장소에 짐이 없으면 즉시 서비스가 종료되며 취소 및 환불을 요쳥하실 수 없습니다.</li>
+                <li class="test">이용하시는 지역 및 장소, 당일 배송량에 따라 도착 시간이 달라질 수 있습니다.</li>
+                <li class="test">도착지에서는 정해진 시간 이후부터 짐을 찾으실 수 있습니다.</li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" id="top-btn" style="display: block;" title="상단이동" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-angle-up" style="color: white"></i></button>
+    <div class="footer"></div>
+</div><!--container-->
+<script src = "dropdown.js"></script>
+</body>
+</html>

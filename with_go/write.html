@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/write.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        const supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+
+        </div>
+        <div class="con_header con">
+            <h1>WITH GO, STAY READY</h1>
+        </div>
+        <div class="con_title con">
+            <h3>빠르고 정확한 상담</h3>
+            <p>언제든 편하게 문의하세요. 빠르고 정확하게 답변드리겠습니다.</p>
+        </div>
+        <div class="section">
+            <div class="section-text">
+                <!-- <div class="section-title">
+                    <h1>문의</h1>
+                </div> -->
+
+                <div class="write">
+                    <div class="group">
+                        <label class="column">이름 <em>*</em></label>
+                        <div class="data"><input type="text" id="name" /><br /></div>
+                    </div>
+                    <div class="group">
+                        <label class="column">비밀번호 <em>*</em></label>
+                        <div class="data"><input type="password" id="password" maxlength="6" placeholder="숫자 최대 6자리" autocomplete="off" /><br /></div>
+                    </div>
+                    <div class="group">
+                        <label class="column">제목 <em>*</em></label>
+                        <div class="data"><input type="text" id="title" /><br /></div>
+                    </div>
+                    <div class="group">
+                        <label class="column" style="width: 89px;">비밀글</label>
+                        <div class="toggle-container">
+                            <div class="toggle-container">
+                                <input type="checkbox" name="secret" id="secret-toggle" class="toggle-checkbox" />
+                                <label for="secret-toggle" class="toggle-label">
+                                    <span class="off">사용안함</span>
+                                    <span class="on">사용함</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <label class="column" style="width: 89px;">예약 종류 <em>*</em></label>
+                        <div class="radio-type" style="display: flex; align-items: center;">
+                            <input type="radio" name="type" id="type1" class="radio" value="배송"><label for="type1">배송</label>
+                            <input type="radio" name="type" id="type2" class="radio" value="보관" style="margin-left: 10px;"><label for="type2">보관</label>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <label class="column">내용 <em>*</em></label>
+                        <div class="data"><textarea id="write_text" rows="15" cols="50"></textarea><br /></div>
+                    </div>
+                    <div class="group">
+                        <label class="column">첨부파일</label>
+                        <input type="file" name="file" id="file"/>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <a class="cancel" href="inquiry.html">취소</a>
+                    <button class="input" id="input-btn" onclick="post()">완료</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+
+
+</body>
+<script src="dropdown.js"></script>
+<script src="write.js"></script>
+
+</html>

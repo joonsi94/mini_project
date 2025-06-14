@@ -1,0 +1,340 @@
+@font-face {
+    font-family: "KoPub Dotum";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff2")
+        format("woff2"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff")
+        format("woff"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.otf")
+        format("opentype"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.ttf")
+        format("truetype");
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: "KoPub Dotum";
+}
+
+body {
+    position: relative;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.header {
+    background-color: #fff;
+    width: 100%;
+    height: 87px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.menu_btn {
+    width: 20%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_btn > img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    width: 60%;
+    z-index:1;
+    font-size: 20px;
+}
+
+.menu > ul {
+    display: flex;
+}
+
+.menu > ul > li {
+    width: 25%;
+}
+
+.menu > ul > li > a {
+    display: block;
+    line-height: 87px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.menu > ul > li > a:hover {
+    color: #ffb74c;
+    font-weight: bold;
+}
+
+.login {
+    font-size: 20px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.select_login {
+    color: #0066CC;
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login:hover > .select_login {
+    font-weight: bolder;
+    color: #ffb74c;
+}
+
+.login_container,
+.logout_container {
+    opacity: 0;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    color: #ffb74c;
+    position: absolute;
+    top: 87px;
+    left: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: translate(-50%);
+    height: 0;
+}
+
+.login_container > div,
+.logout_container > div{
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0.7rem 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.login_container > div:last-child,
+.logout_container > div:last-child {
+    border-bottom: none;
+}
+
+.login_container  > div:hover,
+.logout_container > div:hover {
+    color: #0066CC;
+}
+
+.down {
+    opacity: 1;
+    height: 150%;
+    transition: all 0.3s;
+}
+
+.down2 {
+    opacity: 1;
+    height: 50%;
+    transition: all 0.3s;
+}
+
+.sub_menu_container {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.visible {
+    height: 221px;
+}
+
+.sub_menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+}
+
+.sub_menu > ul {
+    width: 25%;
+    text-align: center;
+    border-right: solid 0.5px #fff;
+    margin-top: 20px;
+}
+
+.sub_menu > ul:last-child {
+    border: none;
+}
+
+.sub_menu > ul > li {
+    height: 25%;
+    overflow: hidden;
+}
+
+.sub_menu > ul > li > a {
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.sub_menu > ul > li > a:hover {
+    color: #ccc;
+    border-bottom: solid 1px #ccc;
+}
+
+/*.sub_menu_modal_container {*/
+/*    overflow: hidden;*/
+/*    background-color: rgba(0, 0, 0, 0.3);*/
+/*    z-index: 1111;*/
+/*    width: 100%;*/
+/*    height: 0;*/
+/*    position: fixed;*/
+/*}*/
+
+/*.active {*/
+/*    height: 100%;*/
+/*    background: rgba(0, 0, 0, 0.6);*/
+/*    transition: background-color 0.5s;*/
+/*}*/
+
+/*.active2 {*/
+/*    background: rgba(0, 0, 0, 0.3);*/
+/*    transition: background-color 0.5s;*/
+/*}*/
+
+/*.sub_menu_modal {*/
+/*    background-color: #fff;*/
+/*    width: 0;*/
+/*    height: 100%;*/
+/*    transform: translateX(-200px);*/
+/*    transition-delay: 0.2s;*/
+/*}*/
+
+/*.slide {*/
+/*    transform: translateX(0);*/
+/*    width: 200px;*/
+/*    transition: all 0.5s;*/
+/*}*/
+
+/*.slide2 {*/
+/*    transform: translateX(-200px);*/
+/*    width: 0;*/
+/*    transition: all 0.5s;*/
+/*}*/
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 191px;
+    background-color: rgb(52,52,51);
+    padding-left: 125px;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+}
+.footer img {
+    width: 112px;
+}
+.footer p {
+    padding-left: 30px;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: rgb(228, 228, 228);
+    line-height: 1.5;
+}
+
+.footer > p > span {
+    display: inline-block;
+    color: rgb(228, 228, 228);
+}
+
+.footer > p > span:before {
+    content: " ";
+    display: inline-block;
+    margin: auto 10px;
+    height: 10px;
+    border-left: solid 1px rgb(228, 228, 228);
+}
+
+.footer-divider {
+    width: 1px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.527); /* 흰색 선 */
+    margin: 0 40px; /* 좌우 간격 */
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 21px;
+    background-color: #000; /* 검정 배경 */
+    color: white; /* 흰색 텍스트 */
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.footer-btn:hover {
+    background-color: #201f1f;
+}
+
+#COPYRIGHT {
+    /*position: absolute;*/
+    /*right: 200px;*/
+    margin-left: 250px;
+    font-size: 10px;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        width: 100%;
+        height: 87px;
+        justify-content: space-between;
+    }
+    .menu {
+        display: none;
+    }
+    .menu_btn {
+        display: flex;
+    }
+}

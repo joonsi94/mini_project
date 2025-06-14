@@ -1,0 +1,108 @@
+.notice-container {
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#notice-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: rgba(228, 228, 228, 0.51);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.notice-row {
+    display: flex;
+    align-items: flex-start;     /* 제목은 한 줄, 내용은 여러 줄이라 위 기준 정렬 */
+    width: 100%;
+    max-width: 800px;
+    gap: 10px;
+}
+
+.notice-label {
+    width: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+    padding-top: 15px; /* 세로 정렬 조절용 */
+}
+.notice-content {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+#notice-title,
+#notice-content {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+
+#notice-content {
+    height: 150px;
+}
+
+/* 버튼 영역 */
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 800px;
+}
+
+.bt1 {
+    padding: 8px 14px;
+    border: none;
+    background-color: rgb(158, 158, 158);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bt1:hover {
+    background-color: rgb(0, 102, 204);
+}
+
+
+.notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.notice-table th, .notice-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.notice-table th {
+    background-color: rgb(0, 102, 204);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.clickable-title {
+    color: #272727;
+    cursor: pointer;
+}
+
+.clickable-title:hover {
+    text-decoration: underline;
+}

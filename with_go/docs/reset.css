@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "KoPub Dotum";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff2")
+        format("woff2"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff")
+        format("woff"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.otf")
+        format("opentype"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.ttf")
+        format("truetype");
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: "KoPub Dotum";
+}
+
+ul, li {
+    list-style: none;
+}

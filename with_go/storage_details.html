@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/keep_map.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="map_container">
+
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        var supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+
+        const res = await supabase.from('storage_place')
+            .select('*')
+            .eq('storage_id', id)
+            .single();
+
+        document.querySelector('.map_container').innerHTML = `
+<div class="map_tit">
+        <p>${res.data.name}</p>
+    </div>
+    <div class="map_infor">
+        <div><span>연락처</span>${res.data.phone}</div>
+        <div><span>주소</span>${res.data.address}</div>
+        <div><span>영업시간</span>오전 10시 ~ 오후 10시</div>
+    </div>
+    <div class="map">
+        <image src="${res.data.image}" style="border:0;"/>
+    </div>
+    <div class="map">
+        <iframe src="${res.data.map_url}" style="border:0;" width="750" height="500"/>
+    </div>
+`;
+    })
+</script>
+</body>
+</html>

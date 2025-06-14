@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+        </div>
+
+        <div class="contents">
+            <h1>TRAVEL STORIES WITH GO</h1>
+        </div>
+        <div class="section">
+            <div class="section-text">
+            <div class="section-title">
+                <h3>이용자들의 솔직한 후기</h3>
+                <p>여러분의 소중한 경험도 함께 공유해 주세요! 최고의 서비스는 함께 만들어갑니다.</p>
+            </div>
+                <!-- 타입 필터 버튼 -->
+                <div class="filter-btns">
+                    <button class="filter-btn active" data-type="all">전체</button>
+                    <button class="filter-btn" data-type="보관">보관</button>
+                    <button class="filter-btn" data-type="배송">배송</button>
+                </div>
+            <div class="write">
+                <!------------------------------------------------------------------>
+                <!-- 후기 카드 목록 -->
+                <div class="review-list" id="review-list"></div>
+                <!-- 페이지네이션 -->
+                <div class="pagination">
+                    <!-- 이전 그룹 화살표 -->
+                    <button id="leftBtn" class="group-btn">
+                        <i class="fa-solid fa-angles-left"></i>
+                    </button>
+                    <!-- 이전 페이지 화살표 -->
+                    <button id="prevBtn" class="arrow-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <!-- 페이지 번호 버튼들이 표시될 영역 -->
+                    <div id="pageBtns" class="page-btns"></div>
+
+                    <!-- 다음 페이지 화살표 -->
+                    <button id="nextBtn" class="arrow-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- 다음 그룹 화살표 -->
+                    <button id="rightBtn" class="group-btn">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </button>
+                </div>
+                <!-- 글쓰기 버튼 -->
+                <div class="button">
+                    <button type="button" id="write-btn">글쓰기</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+
+    <!-- 리뷰 전체보기 -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- JS로 후기 내용 채워짐 -->
+            </div>
+            <div class="modal-footer">
+                <button id="delete-btn" class="modal-edit-btn">삭제하기</button>
+                <button id="edit-btn" class="modal-edit-btn">수정하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="review.js"></script>
+<script src="dropdown.js"></script>

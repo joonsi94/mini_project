@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/service-stor.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <script src="https://kit.fontawesome.com/c2939216d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        var supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+<body>
+<div class="header"></div>
+<div class="header-image"><h3>STORAGE WITH GO</h3></div>
+<div id="container">
+    <h1 class="title">짐 걱정 없는 여행, 완벽한 보관 서비스</h1>
+    <p class="sub-title">
+        출발부터 도착까지, 당신의 짐을 안전하게 지켜드립니다.
+    </p>
+    <div class="how-to">
+        <div class="how-to-use2">
+            <div class="use-icon">
+                <p class="use-step">STEP01</p>
+                <h3 class="use-tit">예약하기</h3>
+                <img src="src/images/smartphone.png" alt="예약등록">
+                <p class="use-txt">보관소 찾기</p>
+            </div>
+            <div class="use-icon">
+                <p class="use-step">STEP02</p>
+                <h3 class="use-tit">결제하기</h3>
+                <img src="src/images/mobile-payment.png" alt="이용요금 결제">
+                <p class="use-txt">온라인으로 간편결제</p>
+            </div>
+            <div class="use-icon">
+                <p class="use-step">STEP03</p>
+                <h3 class="use-tit">보관하기</h3>
+                <img src="src/images/security.png" alt="여행짐 픽업">
+                <p class="use-txt">원하는 장소에 짐 맡기기</p>
+            </div>
+            <div class="use-icon">
+                <p class="use-step">STEP04</p>
+                <h3 class="use-tit">찾기</h3>
+                <img src="src/images/id-card.png" alt="여행짐 수령">
+                <p class="use-txt">본인 확인 후 짐 수령</p>
+            </div>
+        </div>
+    </div>
+    <div class="search-btn-wrap">
+        <a class="search-btn" href="reservation.html"><i class="fa-solid fa-store"></i>보관장소 찾기</a>
+    </div>
+    <h1 class="title">가볍게 맡기고, 부담 없이 이용하세요</h1>
+    <p class="sub-title">크기별 요금제를 확인하고, 필요에 맞게 간편하게 이용하세요!</p>
+    <div class="price-of-storage"><!--    이용요금전체-->
+        <div class="price-st-s">
+            <div class="price-txt">
+                <h5 class="price-txt-size">small</h5>
+                <p class="price-txt-price">4.000원</p>
+                <p class="price-txt-txt">가로*세로*높이 120cm 이하 / 무게 5kg 이하 , +1일당 3,000원씩 추가</p>
+            </div><!--      s-txt-->
+            <div class="price-icon">
+                <div>
+                    <img src="src/images/icebox2.png" alt="icebox">
+                    <p>아이스박스 S</p>
+                </div>
+                <div>
+                    <img src="src/images/bag2.png" alt="icebox">
+                    <p>가방 S</p>
+                </div>
+                <div>
+                    <img src="src/images/umbrella2.png" alt="icebox">
+                    <p>우산 S</p>
+                </div>
+                <div>
+                    <img src="src/images/paperbag2.png" alt="icebox">
+                    <p>쇼핑가방 S</p>
+                </div>
+            </div><!--      s-ico-->
+        </div><!--    price-st-small-->
+        <div class="price-st-m">
+            <div class="price-txt">
+                <h5 class="price-txt-size">medium</h5>
+                <p class="price-txt-price">6.000원</p>
+                <p class="price-txt-txt">가로*세로*높이 160cm 이하 / 무게 20kg 이하 , +1일당 4,000원씩 추가</p>
+            </div><!--      m-txt-->
+            <div class="price-icon">
+                <div>
+                    <img src="src/images/carrier2.png" alt="icebox">
+                    <p>캐리어 M</p>
+                </div>
+                <div>
+                    <img src="src/images/backpack2.png" alt="icebox">
+                    <p>가방 M</p>
+                </div>
+                <div>
+                    <img src="src/images/babystroller2.png" alt="icebox">
+                    <p>유모차 M</p>
+                </div>
+                <div>
+                    <img src="src/images/box2.png" alt="icebox">
+                    <p>박스 M</p>
+                </div>
+            </div><!--      m-ico-->
+        </div><!--    price-m-->
+        <div class="price-st-l">
+            <div class="price-txt">
+                <h5 class="price-txt-size">large</h5>
+                <p class="price-txt-price">8.000원</p>
+                <p class="price-txt-txt">가로*세로*높이 160cm 초과 / 무게 20kg 초과 , +1일당 5,000원씩 추가</p>
+            </div><!--      l-txt-->
+            <div class="price-icon">
+                <div>
+                    <img src="src/images/golf2.png" alt="icebox">
+                    <p>골프채 L</p>
+                </div>
+                <div>
+                    <img src="src/images/bicycle2.png" alt="icebox">
+                    <p>자전거 L</p>
+                </div>
+                <div>
+                    <img src="src/images/scooter2.png" alt="icebox">
+                    <p>전동킥보드 L</p>
+                </div>
+                <div>
+                    <img src="src/images/tent2.png" alt="icebox">
+                    <p>텐트 L</p>
+                </div>
+            </div><!--      l-ico-->
+        </div><!--    price-l-->
+    </div><!--    이용요금전체-->
+    <div class="notice">
+        <div class="notice-img">
+            <img src="src/images/important.png" alt="주의사항">
+        </div>
+        <div class="notice-txt">
+            <p class="noti-txt-txt1">다른 사용자를 위해 보관된 물품은 꼭 찾아가 주세요. <strong>30일 이후로는 폐기</strong> 예정입니다.</p>
+            <p class="noti-txt-txt2"><strong>귀중품 및 현금 보관 금지</strong> : 공공기관에서는 보관함에 현금을 넣어두라고 요구하지 않습니다.</p>
+            <p class="noti-txt-txt3"><strong>음식물 보관 금지</strong> : 음식물 보관 시 부패나 악취로 인해 사전 경고 없이 폐기처분될 수 있습니다.</p>
+        </div>
+    </div>
+    <h1 class="title">우리와 함께하세요! 보관 서비스 호스트 모집</h1>
+    <div class="host-bg">
+        <h1>빈 공간을 공유하고<br/>
+            호스트가<br>
+            되어보세요.</h1>
+        <div class="host-btn-wrap">
+            <a href="" class="host-btn">페이지로 이동</a>
+        </div>
+    </div>
+    <button type="button" id="top-btn" style="display: block;" title="상단이동"
+            onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-angle-up"
+                                                                    style="color: white"></i></button>
+    <div class="footer"></div>
+</div><!--container-->
+<script src="dropdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/promotion.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        var supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eventList = document.querySelector(".event-list");
+
+
+            events.forEach(event => {
+                const eventItem = document.createElement("div");
+                eventItem.classList.add("event-item");
+                eventItem.innerHTML = `
+            <img src="${event.img}" alt="${event.title}">
+            <div class="event-text">
+                <h3>${event.title}</h3>
+                <p>${event.date}</p>
+            </div>
+        `;
+                eventList.appendChild(eventItem);
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".tab_txt ul li a");
+            const contents = document.querySelectorAll(".tab_content");
+
+            tabs[0].classList.add("on");
+            contents[0].classList.add("active");
+            contents[0].style.opacity = "1";
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    tabs.forEach(t => t.classList.remove("on"));
+                    this.classList.add("on");
+
+                    contents.forEach(content => {
+                        content.classList.remove("active");
+                        content.style.opacity = "0.3";
+                    });
+
+                    const targetContent = document.querySelector(`#${this.dataset.tab}`);
+                    if (targetContent) {
+                        targetContent.classList.add("active");
+                        targetContent.style.opacity = "1";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+
+    </div>
+    <div class="content">
+        <h3>SAVE MORE WITH GO</h3>
+    </div>
+    <div class="section">
+        <div class="section-text">
+            <h2 class="title">
+                프로모션
+            </h2>
+            <div class="PROMOTION">
+                <div class="PROMOTION-T">
+                    <div class="tab_txt">
+                        <ul>
+                            <li><a href="#" title="공연티켓 &입장권 판매 탭으로 이동" class="on" data-tab="tab1">공연티켓 & 입장권 판매</a>
+                            </li>
+                            <li><a href="#" title="관광시설 및 행사 이벤트 입장권 판매 탭으로 이동" data-tab="tab2">관광시설 및 행사 이벤트 입장권 판매</a>
+                            </li>
+                            <li><a href="#" title="호텔 & 게스트하우스 예약 탭으로 이동" data-tab="tab3">호텔 & 게스트하우스 예약</a></li>
+                            <li><a href="#" title="픽업& 샌딩 및 투어 예약 탭으로 이동" data-tab="tab4">픽업 & 샌딩 및 투어 예약</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab_content active" id="tab1">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M6 2h12"></path>
+                                <path d="M6 22h12"></path>
+                                <path d="M6 2c0 4 6 6 6 10s-6 6-6 10"></path>
+                                <path d="M18 2c0 4-6 6-6 10s6 6 6 10"></path>
+                            </svg>
+                        </h3>
+                        <p>페이지 준비중 입니다.</p>
+                    </div>
+                    <div class="tab_content" id="tab2">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M6 2h12"></path>
+                                <path d="M6 22h12"></path>
+                                <path d="M6 2c0 4 6 6 6 10s-6 6-6 10"></path>
+                                <path d="M18 2c0 4-6 6-6 10s6 6 6 10"></path>
+                            </svg>
+                        </h3>
+                        <p>페이지 준비중 입니다.</p>
+                    </div>
+                    <div class="tab_content" id="tab3">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M6 2h12"></path>
+                                <path d="M6 22h12"></path>
+                                <path d="M6 2c0 4 6 6 6 10s-6 6-6 10"></path>
+                                <path d="M18 2c0 4-6 6-6 10s6 6 6 10"></path>
+                            </svg>
+                        </h3>
+                        <p>페이지 준비중 입니다.</p>
+                    </div>
+                    <div class="tab_content" id="tab4">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M6 2h12"></path>
+                                <path d="M6 22h12"></path>
+                                <path d="M6 2c0 4 6 6 6 10s-6 6-6 10"></path>
+                                <path d="M18 2c0 4-6 6-6 10s6 6 6 10"></path>
+                            </svg>
+                        </h3>
+                        <p>페이지 준비중 입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+</div>
+<script src="dropdown.js" ></script>
+</body>
+
+</html>

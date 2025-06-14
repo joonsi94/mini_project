@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "KoPub Dotum";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff2")
+    format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff")
+    format("woff"),
+    url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.otf")
+    format("opentype"),
+    url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.ttf")
+    format("truetype");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "KoPub Dotum", serif ;
+}
+li{
+    list-style: none;
+}
+.title{
+    text-align: center;
+    color: rgb(0, 102, 204);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+.sub-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 2rem;
+}
+.header-image{
+    margin-top: 87px;
+    width: 100%;
+    height: 250px;
+    background-image: url('/src/images/service.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header-image h3{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 250px;
+    opacity: 0;
+    animation: slideUp 1.2s forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.search-btn-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+.search-btn {
+    width: 18rem;
+    height: 5rem;
+    border: 3.5px solid #44311A;
+    border-radius: 3rem;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #44311A;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+.search-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.search-btn-wrap i{
+    margin-right: 1rem;
+}
+.how-to{
+    display: flex;
+    justify-content: center;
+}
+.how-to-use2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.use-icon{
+    background-color: rgba(246, 246, 246, 1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 13rem;
+    opacity: 0;
+    animation: slide-up 1.2s ease-out forwards; /* 애니메이션을 추가 */
+    position: relative;
+}
+
+@keyframes slide-up {
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.use-icon:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.use-icon:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.use-icon:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.use-icon:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.use-icon:hover{
+    background-color: rgba(238, 238, 238, 1);
+}
+.use-step{
+    color: white;
+    width: 150px;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: #ff8c00;
+    position: absolute;
+    top: 200px;
+    left: 29px;
+}
+.use-tit{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.use-txt{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.use-icon img{
+    width: 5rem;
+    height: 5rem;
+    padding: 0.5rem;
+    margin: 1rem auto;
+}
+.price-of-storage{
+    margin: 2rem auto;
+    background-color: rgba(246, 246, 246, 1);
+    width: 45rem;
+    height: 47rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.price-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.price-txt-size{
+    font-size: 1rem;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #ff8c00;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    width: 5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+.price-txt-price{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.price-icon{
+    display: flex;
+    justify-content: center;
+}
+.price-icon img{
+    width: 5rem;
+    height: 5rem;
+    margin: 2rem 2.5rem 0 2.5rem;
+}
+.price-icon p{
+    margin: 2rem 0 0;
+    text-align: center;
+}
+.notice{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.notice-img{
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+.notice-img img{
+    width: 5rem;
+}
+.noti-txt-txt1{
+    margin-bottom: 1rem;
+    background-color: #FEF3CB;
+    width: 40rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.noti-txt-txt2{
+    margin-bottom: 1rem;
+    background-color: #F5D7DA;
+    width: 40rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.noti-txt-txt3{
+    margin-bottom: 1rem;
+    background-color: #D3E7DD;
+    width: 40rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.host-bg{
+    margin: 2rem auto 4rem;
+    background-image: url('/src/images/working.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+.host-bg h1 {
+    color: white;
+    font-size: 3em;
+    margin: 50px;
+}
+.host-btn-wrap {
+    margin-top: 20px;
+}
+.host-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.host-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.host-tit{
+    text-align: center;
+}
+.host-txt{
+    display: flex;
+    justify-content: center;
+}
+.host-txt3 i{
+    width: 5rem;
+}
+#top-btn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    background-color: #ffd400;
+    cursor: pointer;
+    padding: 9px 13px;
+    border-radius: 0.5rem;
+}
+#top-btn:hover{
+    background-color: gray;
+}

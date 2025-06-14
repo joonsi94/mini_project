@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/check.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script src="check.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="header"></div>
+    <div class="contents">
+        <div class="section1">
+            <h1>ABOUT WITH GO</h1>
+        </div>
+        <div class="check_detail">
+            <div class="check_detail_contents"></div>
+        </div>
+        <div class="check_container">
+            <div class="check_contents">
+                <div class="check_contents_text">
+                    <h1>보관/배송 내역 조회</h1>
+                    <p>맡긴 짐의 보관, 배송 상태를 조회할 수 있습니다.</p>
+                </div>
+                <div class="change_btn_container">
+                    <div class="change_btn">
+                        <div class="keep_btn active">보관</div>
+                        <div class="delivery_btn">배송</div>
+                    </div>
+                    <p style="margin-top: 1rem">※ 보관장소를 클릭하시면 상세정보를 볼 수 있습니다.</p>
+                </div>
+                <div class="table_container">
+                    <div class="keep_table up">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>수화물 번호</th>
+                                <th>보관 일자</th>
+                                <th>보관 장소</th>
+                                <th>가격</th>
+                                <th>상태</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2025-02-13</td>
+                                <td onclick="openDetail(this)">서울역</td>
+                                <td>6000</td>
+                                <td>보관중</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="delivery_table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>수화물 번호</th>
+                                <th>배송 일자</th>
+                                <th>도착지</th>
+                                <th>가격</th>
+                                <th>상태</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td>2025-02-19</td>
+                                <td onclick="openDetail(this)">홍대입구</td>
+                                <td>2000</td>
+                                <td>배송완료</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

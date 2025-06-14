@@ -1,0 +1,242 @@
+.wrap {
+    background-color: #ccc;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+.content{
+    margin-top: 87px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/with_go/src/images/review_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+
+}
+.content h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 250px;
+    opacity: 0;
+    animation: slideUp 1.2s forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.section-text {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.section-title > h3 {
+  margin-bottom: 10px;
+  color: rgb(0, 102, 204);
+}
+
+.section-title > p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.write {
+  background-color: #f4f5f6;
+  font-size: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.write .group {
+  padding: 15px 27px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e9e9;
+}
+
+.write .group:last-child {
+  border-bottom: none;
+}
+
+.column {
+  padding-left: 7px;
+  width: 100px;
+  font-weight: bold;
+  /* margin-top: 8px; */
+  text-align: left;
+  color: #525f7f;
+}
+
+.data {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.data #name, #password {
+  width: 30%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline-color: #0066cc;
+}
+
+.group.title .data,
+.group.content .data {
+  display: block;
+  width: 100%;
+}
+
+.data #title,
+.data textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline-color: #0066cc;
+}
+
+/* ------------------------------ */
+.group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.column {
+  width: 100px;
+  font-weight: bold;
+  color: #333;
+}
+
+.upload_file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  color: #333;
+}
+
+.custom-file-upload:hover {
+  background-color: #f0f0f0;
+}
+
+#upload_file {
+  display: none;
+}
+
+#file_name {
+  font-size: 14px;
+  color: #666;
+}
+
+.radio-type > label,
+.radio-type > input  {
+    cursor: pointer;
+}
+
+.radio-type > label {
+    font-size: 0.9rem;
+    width: 40px;
+    font-weight: bold;
+    color: #525f7f;
+}
+
+/* ------------------------------ */
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button > a {
+  text-decoration: none;
+}
+
+.cancel, .input {
+  padding: 0 30px;
+  font-size: 1rem;
+  line-height: 43px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease-out;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.cancel {
+  background-color: #768395;
+  border-color: #768395;
+}
+
+.cancel:hover {
+  background-color: #3e454f;
+  border-color: #3e454f;
+}
+
+.input {
+  background-color: rgb(0, 102, 204);
+  border-color: rgb(0, 102, 204);
+}
+
+.input:hover {
+  background-color: #3e454f;
+  border-color: #3e454f;
+}
+
+em {
+  color: red;
+  font-style: normal;
+  vertical-align: -3px;
+}
+
+
+
+

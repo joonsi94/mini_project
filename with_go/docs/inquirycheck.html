@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/inquirycheck.css">
+    <link rel="stylesheet" href="src/css/modify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        const supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+
+        </div>
+        <div class="content">
+            <div class="con_header con">
+                <h1>WITH GO, STAY READY</h1>
+            </div>
+            <div class="con_title con">
+                <h3>빠르고 정확한 상담</h3>
+                <p>언제든 편하게 문의하세요. 빠르고 정확하게 답변드리겠습니다.</p>
+            </div>
+            <div class="con_center con">
+                <div id="cen_heder" class="ch1">
+                    <div id="cen_heder2" class="ch2">
+
+                    </div>
+                </div>
+                <div id="cen_content" class="cc">
+
+                </div>
+                <div id="cen_content2" class="cc2">
+
+                </div>
+                <div id="cen_content3" class="cc3">
+
+                </div>
+                <div id="cen_footer" class="cf1">
+                    <div class="cf2">
+                        <a class="cf_left" href="inquiry.html">목록</a>
+                        <button id="delete" class="cf_right" style="font-size: 1rem;">삭제</button>
+                        <button id="modify" class="cf_right" style="font-size: 1rem; margin-right:25px;">수정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
+<script src="inquirycheck.js"></script>

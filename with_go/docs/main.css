@@ -1,0 +1,536 @@
+@font-face {
+    font-family: "KoPub Dotum";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff2")
+        format("woff2"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.woff")
+        format("woff"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.otf")
+        format("opentype"),
+      url("https://cdn.jsdelivr.net/gh/fonts-archive/KoPubDotum/KoPubDotum-Light.ttf")
+        format("truetype");
+  }
+ 
+
+.wrap {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.main_section {
+    width: 100%;
+    height: 100vh; /* 화면 전체 높이 */
+    position: relative;
+    overflow: hidden;
+    background-color: #e9e9e9;
+    isolation: isolate;
+}
+.main_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e9e9e9;
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 화면에 꽉 차게 설정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* 텍스트보다 뒤로 이동 */
+    mix-blend-mode: multiply;
+}
+.text-box {
+    position: absolute;
+    top: 55%; /* 세로 중앙 정렬 */
+    left: 10%; /* 왼쪽에서 10% 위치 */
+    transform: translateY(-50%);
+}
+.text-box h5 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.text-box h1 {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 48px;
+    font-weight: bolder;
+    line-height: 1.3;
+}
+.booking {
+    width: 211px;
+    height: 57px;
+    background-color: #f7a01e;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+.text-box a {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);   
+}
+.main_section2 {
+    width: 100%;
+    height: 100vh;
+    position: relative; /* 부모 요소를 상대 위치로 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main_section2 img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* 이미지가 꽉 차도록 설정 */
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.text_overlay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    text-align: center;
+    z-index: 2; /* 텍스트가 이미지 위에 나타나도록 */
+    padding: 15px;
+    width: 80%; /* 내용이 너무 넓어지지 않도록 */
+    max-width: 600px;
+}
+
+.text_overlay h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0,102,204);
+}
+
+.text_overlay p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.overayimg {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* 배경보다 위, 텍스트보다 아래 */
+    width: 666px; /* 적절한 크기 조정 */
+}
+.overayimg img {
+    width: 100%;
+    height: auto;
+    opacity: 30%; /* 살짝 투명하게 */
+}
+
+.button-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 3; /* 텍스트와 함께 보이도록 */
+    width: 100%;
+}
+
+.service-link {
+    display: flex; /* 버튼 내부 텍스트 정렬 */
+    flex-direction: column; /* 텍스트를 위아래로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    justify-content: center;
+    background-color: #0056b3;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    width: 530px; 
+    height: 250px;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    margin-top: 5%;
+    
+}
+.service-link img{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: multiply;
+    opacity: 30%;
+}
+
+.service-link p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: white;
+    padding-top: 15px;
+    z-index: 1;
+    
+}
+
+.title {
+    font-size: 25px;
+    color: white;
+    z-index: 1;
+}
+.sub-title {
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    opacity: 80%;
+    z-index: 1;
+}
+.service-link:hover {
+    background-color: rgb(0, 60, 121);
+}
+
+.main_section3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/main_section3_img.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.service {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 50px;
+    top: 5%;
+    z-index: 4;
+}
+
+.service div {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: -40px;
+    z-index: 5;
+}
+
+
+.service div img.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background-color: rgba(38, 0, 255, 0);
+    opacity: 0.9;
+    z-index: 2; /* 배경 이미지 뒤 */
+}
+
+.service div img.icon {
+    position: absolute;
+    width: auto;
+    height: 95px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    filter: drop-shadow(1px 1px 3px rgba(13, 29, 177, 0.5));
+}
+
+
+.service div span {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 3;
+    text-shadow: 1px 1px 3px rgba(13, 29, 177, 0.5);
+}
+
+.service div p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    width: 80%;
+    line-height: 1.5;
+    z-index: 3;
+    text-shadow: 1px 1px 3px rgba(13, 29, 177, 0.5);
+}
+
+.overayimg2 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 666px;
+}
+
+.overayimg2 img {
+    width: 100%;
+    height: auto;
+    opacity: 30%;
+}
+
+.text_overlay2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+    padding: 15px;
+}
+
+.text_overlay2 span {
+    font-size: 15px;
+    color: rgb(0,102,204);
+}
+
+.text_overlay2 h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0,102,204);
+}
+
+.text_overlay2 p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.nav {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+}
+.logo > a > img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu {
+    width: 60%;
+    z-index:1;
+    font-size: 20px;
+}
+
+.menu > ul {
+    display: flex;
+}
+
+.menu > ul > li {
+    width: 25%;
+}
+
+.menu > ul > li > a {
+    display: block;
+    line-height: 87px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.menu > ul > li > a:hover {
+    color: #ffb74c;
+    font-weight: bold;
+}
+
+.language {
+    font-size: 20px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select_language {
+    color: #0066CC;
+    border-bottom: solid 1px #0066CC;
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.select_language::after {
+    content: "▼";
+}
+
+.sub_menu_container {
+    position: relative;
+    width: 100%;
+    height: 221px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.sub_menu_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* 블렌딩용 검은색 */
+    mix-blend-mode: multiply; /* 배경과 섞이도록 설정 */
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.sub_menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    position: relative; 
+    z-index: 2; 
+}
+
+.sub_menu > ul {
+    font-size: 15px;
+    width: 25%;
+    border-right: solid 0.3px #fff;
+    margin-top: 30px;
+}
+
+.sub_menu > ul:last-child {
+    border: none;
+}
+
+.sub_menu > ul > li > a {
+    color: #fff;
+    display: inline-block;
+    width: 70%;
+    margin: 5px 0;
+    padding: 5px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 191px;
+    background-color: rgb(52,52,51);
+    padding-left: 125px;
+    align-items: center; 
+    margin-top: auto;
+    position: relative;
+}
+.footer img {
+    width: 112px;
+}
+.footer p {
+    padding-left: 30px;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: rgb(228, 228, 228);
+    line-height: 1.5;  
+}
+.footer-divider {
+    width: 1px;
+    height: 45px; 
+    background-color: rgba(255, 255, 255, 0.527); /* 흰색 선 */
+    margin: 0 40px; /* 좌우 간격 */
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 21px;
+    background-color: #000; /* 검정 배경 */
+    color: white; /* 흰색 텍스트 */
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.footer-btn:hover {
+    background-color: #201f1f;
+}
+
+#COPYRIGHT {
+    font-size: 10px;
+    position: fixed;
+    right: 125px;
+}

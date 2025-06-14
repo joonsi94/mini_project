@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>review_write</title>
+
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/review_write.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header"></div>
+
+    <div class="content">
+      <h1>TRAVEL STORIES WITH GO</h1>
+    </div>
+
+    <div class="section">
+      <div class="section-text">
+        <div class="section-title">
+          <h3>이용자들의 솔직한 후기</h3>
+          <p>여러분의 소중한 경험도 함께 공유해 주세요! 최고의 서비스는 함께 만들어갑니다.</p>
+        </div>
+
+        <div class="write">
+          <div class="group">
+            <label class="column">이름 <em>*</em></label>
+            <div class="data"><input type="text" id="name" /></div>
+          </div>
+          <div class="group">
+            <label class="column">비밀번호 <em>*</em></label>
+            <div class="data"><input type="password" id="password" maxlength="6" placeholder="숫자 최대 6자리" onkeydown="validation_num(event)" /></div>
+          </div>
+          <div class="group">
+            <label class="column">제목 <em>*</em></label>
+            <div class="data"><input type="text" id="title" /></div>
+          </div>
+          <div class="group">
+            <label class="column">예약 종류 <em>*</em></label>
+            <div class="radio-type" style="display: flex; align-items: center;">
+              <input type="radio" name="type" id="type1" class="radio" value="배송"><label for="type1">배송</label>
+              <input type="radio" name="type" id="type2" class="radio" value="보관" style="margin-left: 10px;"><label for="type2">보관</label>
+            </div>
+          </div>
+          <div class="group">
+            <label class="column">내용 <em>*</em></label>
+            <div class="data"><textarea id="review_text" rows="15" cols="50"></textarea></div>
+          </div>
+          <div class="group">
+            <label class="column">첨부파일</label>
+            <div class="data upload_file">
+              <label for="upload_file" class="custom-file-upload">파일 선택</label>
+              <input type="file" id="upload_file" accept="image/*" multiple />
+              <span id="file_name">선택된 파일 없음</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <a class="cancel" href="review.html">취소</a>
+          <button class="input" id="submit-btn">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
+
+  <script src="review_write.js"></script>
+  <script src="dropdown.js"></script>

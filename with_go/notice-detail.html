@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 상세</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/notice-detail.css">
+
+
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+
+    </div>
+    <div class="content">
+        <h1>WITH GO, STAY INFORMED</h1>
+    </div>
+</div>
+<div class="section">
+    <div class="section-text">
+        <h3>이용자들을 위한 안내사항</h3>
+        <p>안내 사항을 숙지하시고 원활한 이용 바랍니다</p>
+    </div>
+</div>
+<div class="notice">
+    <div class="notice-item">
+        <img src="src/images/notice1.png">
+        <h3>새로운 서비스 출시 안내</h3>
+        <p>2025년 3월 1일부터<br>새로운 서비스가<br>시작됩니다.</p>
+    </div>
+
+    <div class="notice-item">
+        <img src="src/images/notice2.png">
+        <h3>시스템 점검 안내</h3>
+        <p>2025년 2월 28일<br>2:00AM 부터 5:00AM 까지
+            <br/>시스템 점검이 있습니다.</p>
+    </div>
+
+    <div class="notice-item">
+        <img src="src/images/notice3.png">
+        <h3>이벤트 참여 안내</h3>
+        <p>2025년 3월 1일부터<br>다양한 이벤트가 진행됩니다.
+            <br/> 많은 참여 부탁드립니다.</p>
+    </div>
+</div>
+<div class="notice-detail">
+    <div class="detail-text">
+        <div class="notice-header">
+            <h1 id="notice-title" class="title-style">공지사항 제목</h1>
+            <p id="notice-date" class="date-style">공지 날짜</p>
+        </div>
+        <div class="notice-content">
+            <p id="notice-text" class="content-style">공지 내용이 여기에 표시됩니다.</p>
+        </div>
+    </div>
+    <button onclick="location.href='notification.html'" class="back-button">목록</button>
+</div>
+<div class="notice-list">
+    <ul>
+
+        <li><a href="notice-detail.html?id=1">[KTX특송] 3월 미운영 매장 공지</a></li>
+        <li><a href="notice-detail.html?id=2">[보관함] 대구관광안내소 보관함 철거 안내</a></li>
+        <li><a href="notice-detail.html?id=3">[짐배송] 가격 인상 안내</a></li>
+    </ul>
+</div>
+<div class="footer">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="dropdown.js"></script>
+<script src="notice-detail.js"></script>
+
+</body>
+
+</html>

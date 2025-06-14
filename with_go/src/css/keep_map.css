@@ -1,0 +1,43 @@
+.map_container {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.map_img {
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+}
+
+.map_tit {
+    padding: 1.5rem 0;
+    border-bottom: solid 2px black;
+}
+
+.map_tit > p {
+    font-size: 1.5rem;
+}
+
+.map_infor {
+    padding: 1.5rem 0;
+    border-bottom: dotted 1px #ccc;
+}
+
+.map_infor > div {
+    margin: 0.4rem 0;
+}
+
+.map_infor > div,
+.map_infor > div > span {
+    color: #a6a6a6;
+}
+
+.map_infor > div > span {
+    display: inline-block;
+    width: 70px;
+}
+
+.map {
+    margin-top: 1.5rem;
+}

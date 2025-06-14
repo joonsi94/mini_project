@@ -1,0 +1,563 @@
+
+
+.wrap {
+    width: 100%;
+}
+
+.contents {
+    margin-top: 87px;
+    width: 100%;
+}
+
+.section1 {
+    background-image: url("/with_go/src/images/headerBg.png");
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 > h1 {
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 1.2s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.keep_reservation_contents_container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.keep_reservation_contents,
+.keep_reservation_check_contents {
+    overflow: hidden;
+    width: 1250px;
+    margin: 10rem auto;
+    padding: 0 1rem;
+}
+
+.keep_reservation_contents_text {
+    overflow: hidden;
+    text-align: center;
+    margin: 1.5rem 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.keep_reservation_contents_text > h1 {
+    color: rgb(0, 102, 204);
+    font-size: 1.8rem;
+}
+
+.keep_reservation_contents_text > p {
+    margin-top: 1rem;
+}
+
+.keep_reservation_contents_main {
+    overflow: hidden;
+    width: 100%;
+    /*margin-top: 1rem;*/
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slideUp 1s forwards;
+    animation-delay: 0.7s;
+}
+
+.keep_reservation_contents_main_date,
+.keep_reservation_contents_main_user,
+.keep_reservation_contents_main_luggage_infor {
+    margin: 2.5rem 0;
+}
+
+.keep_reservation_contents_main_title_box {
+    display: flex;
+    gap: 2rem;
+}
+
+.keep_reservation_contents_main_title {
+    background-color: #C7E6FF;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.keep_reservation_contents_main_title > p {
+    color: rgb(0, 102, 204);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.keep_reservation_contents_main_box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+}
+
+.keep_reservation_contents_main_box_input-box {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px black;
+}
+
+.input-box_title {
+    margin-left: 2rem;
+    line-height: 4rem;
+    width: 25%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.input-box_content {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    align-content: center;
+}
+
+.input-box_content > input,
+.input-box_content > select {
+    width: 70%;
+    height: 50%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    appearance: none;
+}
+
+.input-box_content > input:focus,
+.input-box_content > select:focus {
+    outline: none;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+
+.agreement_container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 5rem;
+}
+
+.agreement_container > a {
+    color: white;
+    background-color: black;
+    font-size: 0.8rem;
+    align-content: center;
+    padding: 3px 6px;
+}
+
+.agreement_container > a:hover {
+    background-color: #232323;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.agreement > label {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.keep_reservation_contents_main_luggage {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.luggage_box_container {
+    width: 100%;
+}
+
+.luggage_box {
+    background-color: #F2F2F2;
+    border: solid 1px #9B9B9B;
+    border-radius: 20px;
+    text-align: center;
+    height: 425px;
+}
+
+.luggage_box_img {
+    padding: 2rem;
+    height: 345px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.luggage_box_content {
+    padding: 1rem;
+}
+
+.luggage_box_content > h2 {
+    line-height: 3rem;
+    color: rgb(0, 102, 204);
+    font-size: 1.7rem;
+}
+
+.luggage {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.m {
+    border-radius: 25px 0 0 25px;
+}
+
+.p {
+    border-radius: 0 25px 25px 0;
+}
+
+.luggage > button {
+    background-color: rgb(0, 102, 204);
+    color: white;
+    border: none;
+    padding: 0.7rem 0.5rem;
+    cursor: pointer;
+    width: 25%;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.luggage > button:hover {
+    background-color: rgb(0, 102, 204);
+    transition: all 0.5s;
+}
+
+.luggage > input {
+    background-color: #F2F2F2;
+    width: 90%;
+    border: none;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.luggage > input:focus {
+    outline: none;
+}
+
+
+.keep_reservation_contents_main_payment {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11rem;
+}
+
+.payment_infor {
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: end;
+}
+
+.payment_infor > h1 {
+    color: rgb(0, 102, 204);
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.payment_infor > h2 {
+    font-size: 2.1rem;
+    margin-left: 1rem;
+}
+
+.payment_infor > h2 > span {
+    font-size: 2.3rem;
+    margin-left: 1rem;
+}
+
+
+.payment_infor > h3 {
+    color: rgb(0, 102, 204);
+    font-size: 1.8rem;
+}
+
+.keep_reserve_btn {
+    text-align: center;
+}
+
+.keep_reserve_btn > button {
+    background-color: #FF9900;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.keep_reserve_btn > button:hover {
+    background-color: #ea8f00;
+    scale: 1.1;
+}
+
+.keep_location,
+.start_location,
+.arrive_location {
+    overflow: hidden;
+    z-index: 1111;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+}
+
+.fade_in {
+    background-color: rgba(0,0,0,0.7);
+    transition: background-color 0.4s;
+    height: 100%;
+}
+
+.keep_location_contents,
+.start_location_contents,
+.arrive_location_contents {
+    position: relative;
+    background-color: white;
+    width: 400px;
+    padding: 1.5rem;
+    margin: 0 50px;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    transform: translateY(400px);
+    opacity: 0;
+}
+
+.up {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #717171;
+}
+
+.close:hover {
+    color: #323232;
+}
+
+.keep_location_contents_header,
+.start_location_contents_header,
+.arrive_location_contents_header {
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1px #ccc;
+}
+
+.card {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+.card > label {
+    cursor: pointer;
+}
+
+.card_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.card_title > input[type="radio"] {
+    appearance: none;
+    border: solid 1px #000;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.card_title > input[type="radio"]:checked {
+    background-image: url("/with_go/src/images/checkBox.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card_body > p {
+    margin-top: 0.4rem;
+}
+
+.submit_select {
+    padding: 1rem;
+    border-top: solid 1px #ccc;
+}
+
+.submit_select > button {
+    background-color: rgb(0, 102, 204);
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.submit_select > button:hover {
+    background-color: rgb(0, 102, 204);
+}
+
+.touModal_container {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 11111;
+    top: 0;
+    overflow-y: auto;
+    display: none;
+}
+
+.touModal {
+    overflow: hidden;
+    background-color: white;
+    width: 600px;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+.touModal_header {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.touModal_title {
+    overflow: hidden;
+}
+
+.touModal_title > h2 {
+    margin: 1rem 0;
+}
+
+.touModal_body {
+    padding: 1rem;
+}
+
+.touModal_content {
+    background-color: white;
+    line-height: 1.5;
+}
+
+.keep_reservation_infor_ul > li {
+    display: flex;
+    gap: 2.5rem;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.keep_reservation_infor_ul > li > p {
+    width: 100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+th {
+    padding: 0.7rem 3rem 0.7rem 3rem;
+    border-bottom: 2px solid #ccc;
+}
+
+td {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 1250px) {
+    .keep_reservation_contents {
+        width: 95%;
+    }
+}
+
+@media (max-width: 920px) {
+    .keep_reservation_contents_main_box {
+        grid-template-columns: 1fr;
+    }
+    .keep_reservation_contents_main_luggage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .luggage_box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 540px) {
+    .keep_reservation_contents_main_luggage {
+        grid-template-columns: 1fr;
+    }
+
+    .luggage_box {
+        width: 80%;
+    }
+}

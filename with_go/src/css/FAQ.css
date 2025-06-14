@@ -1,0 +1,128 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: auto; /* 가로 스크롤 추가 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    font-family: "KoPub Dotum", serif;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.content {
+    margin-top: 87px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5e5e5e;
+    background-image: url(/src/images/review_bg.png);
+    background-size: cover;
+}
+.content h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 250px;
+    opacity: 0;
+    animation: slideUp 1.2s forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.FAQ-section {
+    display: flex;
+    max-width: 1000px;
+    justify-content: center;
+    position: relative;
+    margin: 100px auto 0;
+}
+
+.faq-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.faq-item {
+    line-height: 1.5;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+.question {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgb(39, 39, 39);
+}
+.question::before {
+    content: 'Q';
+    color: #ff8c00;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.answer {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.answer.active {
+    opacity: 1;
+    max-height: 500px;
+}
+
+.answer .label-a {
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(0, 102, 204);
+    flex-shrink: 0;
+    line-height: 1.5;
+    padding-top: 2px;
+}
+
+.answer .answer-text {
+    white-space: pre-line;
+    font-size: 15px;
+    color: rgb(39, 39, 39);
+    font-weight: normal;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.pagination {
+    text-align: center;
+    margin: 70px auto 100px;
+}
+
+.page-button {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(158, 158, 158);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.page-button.active {
+    background-color: rgb(0, 102, 204);
+}

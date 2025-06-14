@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/inquiry.css">
+    <link rel="stylesheet" href="src/css/write.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        const supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+
+        </div>
+        <div class="content">
+            <h1>WITH GO, STAY READY</h1>
+        </div>
+        <div class="section">
+            <div class="section-text">
+                <h3>빠르고 정확한 상담</h3>
+                <p>언제든 편하게 문의하세요. 빠르고 정확하게 답변드리겠습니다.</p>
+            </div>
+        </div>
+            <div class="con_center con">
+                <div class="cen_up">
+                    <div class="up_right">
+                        <select name="" id="search_select" class="search_sel">
+                            <option>제목</option>
+                            <option>제목+내용</option>
+                            <option>작성자</option>
+                        </select>
+                        <input type="text" name="search" id="searchinput" class="search" placeholder="검색어를 입력해주세요.">
+                        <i class="fa-solid fa-magnifying-glass search_img" id="searchIcon"></i>
+                    </div>
+                </div>
+                <div class="center con">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 80px;">번호</th>
+                                <th scope="col" style="width: 80px;">구분</th>
+                                <th scope="col" style="width: 600px;">제목</th>
+                                <th scope="col" style="width: 160px;">작성자</th>
+                                <th scope="col" style="width: 100px;">작성일</th>
+                                <th scope="col" style="width: 80px;">처리현황</th>
+                            </tr>
+                        </thead>
+                        <tbody id="board_list">
+
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <!-- 이전 그룹 화살표 -->
+                        <button id="leftBtn" class="group-btn">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </button>
+                        <!-- 이전 페이지 화살표 -->
+                        <button id="prevBtn" class="arrow-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+    
+                        <!-- 페이지 번호 버튼들이 표시될 영역 -->
+                        <div id="pageBtns" class="page-btns"></div>
+    
+                        <!-- 다음 페이지 화살표 -->
+                        <button id="nextBtn" class="arrow-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+    
+                        <!-- 다음 그룹 화살표 -->
+                        <button id="rightBtn" class="group-btn">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="cen_down con2">
+                    <div class="down_right">
+                        <a class="down_write" href="write.html">글쓰기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="password-popup" class="password-popup">
+        <div class="popup-content">
+            <input type="password" id="password-input" placeholder="비밀번호를 입력하세요">
+            <button id="password-submit">확인</button>
+            <button id="password-cancel">취소</button>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
+<script src="inquiry.js"></script>

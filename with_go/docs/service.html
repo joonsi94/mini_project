@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/service.css">
+    <script src="https://kit.fontawesome.com/c2939216d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+
+        var supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+<body>
+<div class="header"></div>
+<div class="header-image"><h3>ABOUT WITH GO</h3></div>
+<div id="container">
+
+    <h1 class="title">캐리어 이동 및 보관 서비스</h1>
+    <p class="sub-title">위드고는 <strong>캐리어의 당일배송 및 보관</strong>을 전문으로 하고있으며,
+        <br/>주변 가까운 곳에 짐 뿐만 아니라 <strong>개인물품까지 안전하게 보관하는 서비스</strong>를 제공하고 있습니다</p>
+    <div class="info-service">
+        <ul>
+            <li class="li-info-circle">
+                <div class="info-circle">
+                    <h3 class="info-circle-num">01</h3>
+                    <h3 class="info-circle-txt">예약</h3>
+                    <img src="src/images/check.png" alt="예약">
+                    <p>원하는 서비스를 선택하고<br/> 온라인 결제 완료!</p>
+                </div>
+            </li>
+            <li class="li-info-circle">
+                <div class="info-circle">
+                    <h3 class="info-circle-num">02</h3>
+                    <h3 class="info-circle-txt">이동/보관</h3>
+                    <img src="src/images/move.png" alt="이동,보관">
+                    <p>예약 일정에 맞추어<br/>짐을 맡겨주세요.</p>
+                </div>
+            </li>
+            <li class="li-info-circle">
+                <div class="info-circle">
+                    <h3 class="info-circle-num">03</h3>
+                    <h3 class="info-circle-txt">수령</h3>
+                    <img src="src/images/weight.png" alt="예약">
+                    <p>예약한 장소에 배송된<br/>짐을 찾아주세요.</p>
+                </div>
+            </li>
+        </ul>
+    </div> <!--info service-->
+    <h1 class="title">서비스 이용방법 및 주의사항</h1>
+    <div class="how-to-use">
+        <a href="terms.html" target="_blank">이용약관 상세보기</a>
+    </div>
+    <ul class="use-circle" id="test2">
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-street-view"></i>
+                <p>예약장소<br/>확인 필수</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-clock"></i>
+                <p>예약일정<br/>시간 엄수</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>무게 제한<br/>20kg 이하</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-ruler"></i>
+                <p>높이 제한<br/>합 160cm</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-camera"></i>
+                <p>이용 전<br/>사진촬영</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <p>귀중품<br/>직접소지</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-bomb"></i>
+                <p>위험물<br/>제한</p>
+            </div>
+        </li>
+        <li>
+            <div class="info-mini-circle">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+                <p>폭우, 폭설<br/>사전취소안내</p>
+            </div>
+        </li>
+    </ul>
+    <h1 class="title" >위드고 매장 안내도</h1>
+    <p class="sub-title">내 근처에서 <strong>간편하게 맡기고 찾아요!</strong></p>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.7947745150423!2d128.6251565750966!3d35.87854581911083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e19245c87b9f%3A0x391cab6391812c8c!2z64-Z64yA6rWs!5e0!3m2!1sko!2skr!4v1738728014201!5m2!1sko!2skr" width="600" height="450" style="border:0; display: block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="dongDaegu"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.957073410477!2d128.63915900000003!3d35.899066999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35660a65a2bdedc7%3A0xcf84fe49611978e8!2z64yA6rWs6rWt7KCc6rO17ZWt!5e0!3m2!1sko!2skr!4v1741078577894!5m2!1sko!2skr" width="600" height="450" style="border:0; display: none" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="daeguAirport"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.086894152479!2d126.43939297642672!3d37.458670230304996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b9a833a5efa59%3A0x8d4ba096cb5cbed4!2z7J247LKc6rWt7KCc6rO17ZWt!5e0!3m2!1sko!2skr!4v1741078770934!5m2!1sko!2skr" width="600" height="450" style="border:0; display: none" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="incheonAirport"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.0637063104173!2d129.13638007637186!3d35.79836932352933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3566463bfe85dcd9%3A0xda0a34b985118efd!2z6rK97KO87Jet!5e0!3m2!1sko!2skr!4v1741078926783!5m2!1sko!2skr" width="600" height="450" style="border:0; display: none" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="gyeongju"></iframe>
+    </div>
+    <div class="map-under">
+        <div>
+        <div class="map-under-icon" id="dongDaegu_btn">
+            <a href="">
+                    <span class="map-icon-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>동대구역</p>
+                    </span>
+                <div class="map-icon-time">
+                    <p>09:00 ~ 20:00</p>
+                </div>
+            </a>
+        </div>
+        </div>
+    <div>
+        <div class="map-under-icon" id="daeguAirport_btn">
+            <a href="">
+                    <span class="map-icon-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>대구공항</p>
+                    </span>
+                <div class="map-icon-time">
+                    <p>09:00 ~ 20:00</p>
+                </div>
+            </a>
+        </div>
+    </div>
+        <div>
+        <div class="map-under-icon" id="incheonAirport_btn">
+            <a href="">
+                    <span class="map-icon-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>인천공항</p>
+                    </span>
+                <div class="map-icon-time">
+                    <p>09:00 ~ 20:00</p>
+                </div>
+            </a>
+        </div>
+        </div>
+        <div>
+        <div class="map-under-icon" id="gyeongju_btn">
+            <a href="">
+                    <span class="map-icon-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>경주역</p>
+                    </span>
+                <div class="map-icon-time">
+                    <p>09:00 ~ 20:00</p>
+                </div>
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="go-res">
+        <p class="go-res-tit">여행을 위한 짐이 여행을 방해하지 않도록</p>
+        <a href="reservation.html">바로 예약하기</a>
+    </div>
+    <button type="button" id="top-btn" style="display: block;" title="상단이동" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-angle-up" style="color: white"></i></button>
+    <div class="footer"></div>
+</div><!--container-->
+<script src = "dropdown.js"></script>
+<script src = "mapChange.js"></script>
+</body>
+</html>

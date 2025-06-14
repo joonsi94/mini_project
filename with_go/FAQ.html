@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/FAQ.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = "https://zgrjjnifqoactpuqolao.supabase.co";
+        const supabasePassword = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpncmpqbmlmcW9hY3RwdXFvbGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEyNDc0NTgsImV4cCI6MjA1NjgyMzQ1OH0._Vl-6CRKdMjeDRyNoxlfect7sgusZ7L0N5OYu0a5hT0";
+        var supabase = window.supabase.createClient(supabaseUrl, supabasePassword);
+    </script>
+</head>
+
+<body>
+<div class="wrap">
+    <div id="header" class="header"></div>
+    <div class="content">
+        <h1>FAQ WITH GO</h1>
+    </div>
+</div>
+
+<div class="FAQ-section">
+    <div class="faq-container" id="page1"> </div>
+    <div class="faq-container" id="page2"> </div>
+</div>
+
+<div class="pagination">
+    <button class="page-button active" data-page="1" onclick="showPage(1)">1</button>
+    <button class="page-button" data-page="2" onclick="showPage(2)">2</button>
+</div>
+
+<div id="footer" class="footer"></div>
+
+<script src="dropdown.js" defer></script>
+<script src="FAQ.js" defer></script>
+</body>
+
+</html>
